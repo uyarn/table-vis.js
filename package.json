@@ -1,0 +1,19 @@
+{
+  "name": "tabular-vis.js",
+  "version": "0.0.1",
+  "description": "a Javascript Library for visualising the tabular data selected and adapting the information overload.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YarnChen/tabular-vis.js.git"
+  },
+  "author": "Yuyang Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YarnChen/tabular-vis.js/issues"
+  },
+  "homepage": "https://github.com/YarnChen/tabular-vis.js#readme"
+}
