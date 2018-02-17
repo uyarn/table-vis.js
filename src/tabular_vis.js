@@ -1,11 +1,9 @@
+'use strict';
 
+const tabular_vis={
 
-var tabular_vis = function(option){
-  'use strict'
-
-  function add(option){
+  add:function(option){
     return option+1;
-
   }
 
 }
