@@ -1,6 +1,6 @@
 'use strict';
 var tomap=require('./toMap');
-const tabular_vis={
+var tabular_vis={
   add:tomap
   // chart_view:chartFunc
 

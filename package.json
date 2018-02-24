@@ -1,6 +1,6 @@
 {
   "name": "tabular_vis",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "a Javascript Library for visualising the tabular data selected and adapting the information overload.",
   "main": "./src/tabular_vis.js",
   "scripts": {
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/YarnChen/tabular_vis#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-browserify": "^0.5.1",
     "mocha": "^5.0.1"
   }
 }

@@ -4,6 +4,4 @@ function toGoogleMap(){
 
 }
 
-module.exports={
-     toGoogleMap:toGoogleMap
-}
+module.exports=toGoogleMap
