@@ -1,14 +1,14 @@
 'use strict';
-
+var tomap=require('./toMap');
 const tabular_vis={
-
-  add:function(option){
-    return option+1;
-  }
+  add:tomap
+  // chart_view:chartFunc
 
 }
 
-
+/*!
+ *  exports the module
+ */
 if(typeof module!== 'undefined' && module.exports){
   module.exports = tabular_vis;
 }
