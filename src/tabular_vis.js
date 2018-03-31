@@ -1,8 +1,7 @@
 'use strict';
-var tomap=require('./toMap');
+//var tomap=require('./toMap');
 var tabular_vis={
-  add:tomap
-  // chart_view:chartFunc
+  
 
 }
 
