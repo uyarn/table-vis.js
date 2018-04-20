@@ -1,14 +1,13 @@
 'use strict';
-var tomap=require('./toMap');
-var tabular_vis={
-  add:tomap
-  // chart_view:chartFunc
+const line = require('./toLines/line');
+const tabular_vis={
+    line:line
 
 }
 
 /*!
  *  exports the module
  */
-if(typeof module!== 'undefined' && module.exports){
+if(typeof module!== 'undefined' && typeof exports === `object`){
   module.exports = tabular_vis;
 }
