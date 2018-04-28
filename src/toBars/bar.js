@@ -2,7 +2,8 @@
 const base=require('../base/base.js');
 const bar=function(val,direction){
   // 判断绑定的参数是否为dom元素
-    base(val);
+    let cell= base(val,direction);
+    let cellData=[];
 }
 
 /*!

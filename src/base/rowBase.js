@@ -1,12 +1,11 @@
 'use strict';
 
+
 const rowBase = (vis_cell)=>{
-  vis_cell.childNodes.forEach(
-    function(val){
-      val.addEventListener('mouseover',function(){
-        console.log('hello world');
-      })
-    })
+  if(typeof vis_cell=="object")
+    return vis_cell.children;
+  else
+    console.error("the cell bind doesn't come from DOM ");
 }
 
 module.exports=rowBase;
