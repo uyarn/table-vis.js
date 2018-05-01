@@ -1,7 +1,7 @@
 'use strict';
 
 const className={
-  addClass:function(ele, name){
+  addClass:function(ele,name){
       // get the origin class name
       let originClassName = ele.className;
       // if it has class name , make a blank, else make nothing

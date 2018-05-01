@@ -9,6 +9,9 @@
     position: absolute;
     top:1500px;
   }
+  table td{
+    border: 1px solid #000;
+  }
   </style>
 </head>
 <body>
@@ -31,9 +34,6 @@
   <td>3</td>
   <td>4</td>
   <td>5</td>
-  </tr>
-  <tr>
-  <td>1</td>
   <td>2</td>
   <td>3</td>
   <td>4</td>
@@ -41,6 +41,21 @@
   </tr>
   <tr>
   <td>1</td>
+  <td>2</td>
+  <td>3</td>
+  <td>4</td>
+  <td>5</td>
+  <td>2</td>
+  <td>3</td>
+  <td>4</td>
+  <td>5</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>2</td>
+  <td>3</td>
+  <td>4</td>
+  <td>5</td>
   <td>2</td>
   <td>3</td>
   <td>4</td>
@@ -86,8 +101,7 @@
 </table>
 <script src="../dist/tabular_vis.min.js"></script>
 
-<script src="https://d3js.org/d3.v5.min.js"></script>
 <script>
-console.log(d3);
+tabular_vis.bar(document.getElementsByTagName('tr')[7],'row');
 </script>
 </html>
