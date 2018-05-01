@@ -1,6 +1,10 @@
+'use strict';
+// const d3 = require('d3');
 
-const drawLine=(data,focusCell)=>{
 
+function drawLine(cell,data,focusCell){
+   // callback className
+   //className.addClass(focusCell,'tabular-vis-diagram');
 }
 
-module.exports= drawLine;
+export default drawLine;
