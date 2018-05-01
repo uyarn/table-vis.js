@@ -2,7 +2,7 @@
   "name": "tabular_vis",
   "version": "0.0.3",
   "description": "a Javascript Library for visualising the tabular data selected and adapting the information overload.",
-  "main": "./src/index.js",
+  "main": "./dist/tabular_vis.js",
   "scripts": {
     "start": "serve demo",
     "build": "rollup -c",
