@@ -1,116 +1,67 @@
 <!doctype html>
 <html>
 <head>
+<meta charset='uft-8'/>
   <style>
   body{
-    height: 3000px;
+    height: 1500px;
+  }
+  table{
+    margin: 0 auto;
+    text-align: center;
+  }
+  h1,h3{
+    text-align: center;
   }
   #d2{
     position: absolute;
-    top:1500px;
+    top:700px;
   }
   table td{
     border: 1px solid #000;
   }
-  </style>
+</style>
 </head>
 <body>
-
-</body>
+<h1>Tabular_vis Demo</h1>
+<h3>Players Score Table</h3>
 <table>
 <thead>
 <tr>
-<th>test1</th>
-<th>test2</th>
-<th>test3</th>
-<th>test4</th>
-<th>test5</th>
+<th></th><th>Round1</th><th>Round2</th><th>Round3</th><th>Round4</th><th>Round5</th><th>Round6</th><th>1/16 Final</th><th>1/8 Final</th><th>1/4 Final</th><th>Semi Final</th><th>Final</th>
 </tr>
 </thead>
 <tbody>
   <tr>
-  <td>1</td>
-  <td>2</td>
-  <td>3</td>
-  <td>4</td>
-  <td>5</td>
-  <td>2</td>
-  <td>3</td>
-  <td>4</td>
-  <td>5</td>
-  <td>1</td>
-  <td>2</td>
-  <td>3</td>
-  <td>4</td>
-  <td>20</td>
-  <td>2</td>
-  <td>3</td>
-  <td>4</td>
-  <td>5</td>
+  <td>Andy</td><td>92</td><td>73</td><td>84</td><td>15</td><td>22</td><td>93</td><td>14</td><td>54</td><td>71</td><td>92</td><td>93</td>
   </tr>
   <tr>
-  <td>1</td>
-  <td>2</td>
-  <td>3</td>
-  <td>4</td>
-  <td>5</td>
-  <td>2</td>
-  <td>3</td>
-  <td>4</td>
-  <td>5</td>
+  <td>Judy</td><td>82</td><td>83</td><td>24</td><td>51</td><td>62</td><td>31</td><td>64</td><td>15</td><td>20</td><td>94</td><td>95</td>
   </tr>
   <tr>
-  <td>1</td>
-  <td>2</td>
-  <td>3</td>
-  <td>4</td>
-  <td>5</td>
-  <td>2</td>
-  <td>3</td>
-  <td>4</td>
-  <td>5</td>
+  <td>John</td><td>52</td><td>13</td><td>4</td><td>5</td><td>21</td><td>23</td><td>14</td><td>20</td><td>22</td><td>13</td><td>14</td>
+  </tr>
+  <tr>
+  <td>Yarn</td><td>62</td><td>90</td><td>74</td><td>75</td><td>51</td><td>73</td><td>64</td><td>20</td><td>22</td><td>93</td><td>74</td>
+  </tr>
+  <tr>
+  <td>Chen</td><td>72</td><td>13</td><td>84</td><td>85</td><td>21</td><td>43</td><td>64</td><td>20</td><td>22</td><td>13</td><td>14</td>
+  </tr>
+  <tr>
+  <td>Jacky</td><td>52</td><td>74</td><td>64</td><td>55</td><td>91</td><td>53</td><td>14</td><td>20</td><td>52</td><td>73</td><td>84</td>
+  </tr>
+  <tr>
+  <td>Linda</td><td>63</td><td>80</td><td>64</td><td>65</td><td>71</td><td>39</td><td>40</td><td>82</td><td>52</td><td>73</td><td>84</td>
   </tr>
 </tbody>
 </table>
 
-
-<table id='d2'>
-<thead>
-<tr>
-<th>test1</th>
-<th>test2</th>
-<th>test3</th>
-<th>test4</th>
-<th>test5</th>
-</tr>
-</thead>
-<tbody>
-  <tr>
-  <td>1</td>
-  <td>2</td>
-  <td>3</td>
-  <td>4</td>
-  <td>5</td>
-  </tr>
-  <tr>
-  <td>1</td>
-  <td>2</td>
-  <td>3</td>
-  <td>4</td>
-  <td>5</td>
-  </tr>
-  <tr>
-  <td>1</td>
-  <td>2</td>
-  <td>3</td>
-  <td>4</td>
-  <td>5</td>
-  </tr>
-</tbody>
-</table>
-<script src="../dist/tabular_vis.min.js"></script>
-
+<script src="../dist/tabular_vis.min.js">
+</script>
 <script>
-tabular_vis.bar(document.getElementsByTagName('tr')[1],'row');
+
+  tabular_vis.line(document.getElementsByTagName('tr')[1],'row');
+
+
 </script>
 </html>

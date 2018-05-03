@@ -1,6 +1,6 @@
 'use strict';
 
-const baseStyle=(ctx)=>{
+const barStyle=(ctx)=>{
   let focusGrad = ctx.createLinearGradient(0,200,0,0);
       focusGrad.addColorStop(0, 'rgba(110,200,245,1)');
       focusGrad.addColorStop(1, 'rgba(40,125,250,1)');
@@ -10,4 +10,4 @@ const baseStyle=(ctx)=>{
   return [focusGrad,normalGrad];
 }
 
-export default baseStyle;
+export default barStyle;

@@ -1,13 +1,14 @@
 'use strict';
 // import base modules
 import canvasBase from '../base/canvas_base/canvasBase';
-import barStyle from './barStyle';
+
 // import draw bar partial function
 import drawLineBase from '../base/canvas_base/drawLineBase';
 import drawMarkBase from '../base/canvas_base/drawMarkBase';
-import drawBarRect from './drawBarRect';
+import drawLinePath from './drawLinePath';
+import lineStyle from './lineStyle';
 
-const drawBar=(data,focI)=>{
+const drawLine=(data,focI)=>{
     data = data.map((item)=>{ return parseInt(item, 10);});
     let width=document.body.clientWidth*0.3+15,height=400;
     // initial the canvas
@@ -23,10 +24,10 @@ const drawBar=(data,focI)=>{
     // draw Mark
     drawMarkBase(ctx,maxData,data.length,width,height);
     // set bar Style
-    let rectStyle=barStyle(ctx);
-    drawBarRect(ctx,data,width,height,scale,rectStyle,focI);
+    let line_style=lineStyle();
+    drawLinePath(ctx,data,width,height,scale,line_style,focI);
 
 }
 
 
-export default drawBar;
+export default drawLine;

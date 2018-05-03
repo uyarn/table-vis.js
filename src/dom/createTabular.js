@@ -4,14 +4,17 @@ import className from './className';
 const createTabular=()=>{
   // create the container div;
   let tabularContainer = document.createElement('div');
-  // create the tabular div
-  let tabular = document.createElement('div');
-  className.addClass(tabular,'tabular');
+
   className.addClass(tabularContainer,'tabular_container');
-  tabularContainer.appendChild(tabular);
+  tabularContainer.addEventListener('click',()=>{
+    tabularContainer.removeAttribute('style');
+    tabularContainer.style.width = "0";
+    tabularContainer.removeChild(tabularContainer.firstElementChild);
+  })
+  // tabularContainer.appendChild(tabular);
   document.body.appendChild(tabularContainer);
+  console.log('Create Tabular div done')
   return tabularContainer;
-  console.log('Create fixed Tabular done')
 
 }
 

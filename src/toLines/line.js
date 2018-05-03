@@ -1,14 +1,14 @@
 'use strict';
 
 import base from '../base/base';
-import drawBar from './drawBar';
+import drawLine from './drawLine';
 // insert css style to head
 import insertCss from '../dom/insertCss';
 // create fixed div tabular
 import createTabular from '../dom/createTabular';
 import swapTabularVis from '../dom/swapTabularVis';
 
-const bar=(val,direction)=>{
+const line=(val,direction)=>{
   // 判断绑定的参数是否为dom元素
     let cell= base(val,direction);
     let cellData=[];
@@ -33,7 +33,7 @@ const bar=(val,direction)=>{
             // let e=event||window.event;
             click=swapTabularVis(click,tabular_container);
             if(click)
-              drawBar(cellData,cellIndex);
+              drawLine(cellData,cellIndex);
 
           },true);
     }
@@ -41,4 +41,4 @@ const bar=(val,direction)=>{
 /*!
  *  exports the module
  */
-export default bar;
+export default line;

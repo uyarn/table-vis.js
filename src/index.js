@@ -1,7 +1,9 @@
 'use strict';
 import bar from './toBars/bar';
+import line from './toLines/line';
 const tabular_vis={
-    bar:bar
+    bar:bar,
+    line:line
 }
 /*!
  *  exports the module
