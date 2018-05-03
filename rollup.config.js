@@ -11,8 +11,8 @@ export default [{
 		sourcemap: true
 	},
 	plugins: [
-		// resolve(),
-		// commonjs(),
+		resolve(),
+		commonjs(),
 		uglify()
 	]
 },

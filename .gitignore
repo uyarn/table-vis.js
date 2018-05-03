@@ -4,6 +4,5 @@ npm-debug.log
 package-lock.json
 
 # Dependency directory
-node_modules
 #Mac OS Files
 .DS_Store

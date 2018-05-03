@@ -26,9 +26,9 @@ const bar=(val,direction)=>{
         (event)=>{
           let e=event||window.event;
           click=swapTabularVis(click,tabular_container,e.clientX,e.clientY);
-          if(click){
-            drawBar(cellData,cellIndex)
-          }
+          if(click)
+            drawBar(cellData,cellIndex);
+          
         },true);
     }
 }

@@ -14,6 +14,7 @@
     * Commonjs
       ```javascript
       const tabular_vis = require('tabular_vis');
+      tabular_vis.bar(getElementsByTagName('tr')[0],'row');
       ```
     * ES2015
       ```javascript
