@@ -18,8 +18,14 @@ const canvasBase={
      .domain([0,d3.max(data)]);
      return scale;
    },
+   setPieScale:function(total){
+     let scale = d3.scaleLinear()
+     .range([0,2*Math.PI])
+     .domain([0,total]);
+     return scale;
+   },
    maxData:function(data){
-     return d3.max(data); 
+     return d3.max(data);
    }
 }
 
