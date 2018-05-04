@@ -8,15 +8,24 @@ import insertCss from '../dom/insertCss';
 import createTabular from '../dom/createTabular';
 import swapTabularVis from '../dom/swapTabularVis';
 
-const bar=(val,direction)=>{
+const bar=function(table,direction,index){
   // 判断绑定的参数是否为dom元素
-    let cell= base(val,direction);
+    let cell= base(table,direction,index);
     let cellData=[];
     let click=false;
     let reg = new RegExp(/^\d+\.?\d*$/);
+    let tabular_container;
     // to insert the diagram css style
-    insertCss();
-    let tabular_container=createTabular();
+
+    // this is to reslove the prolem of choosing multi rows and column
+    if(!this.initial){
+      insertCss();
+      tabular_container=createTabular();
+      this.initial = true;
+    }
+    else {
+      tabular_container = document.getElementById('tabular_vis');
+    }
     for(let i =0;i<cell.length;i++){
         if(!reg.test(cell[i].innerHTML)){
           cell.splice(i,1);

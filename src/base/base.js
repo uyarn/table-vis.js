@@ -2,18 +2,18 @@
 
 import rowBase from './rowBase';
 import colBase from './colBase';
-const base=(cell,direct)=>{
+const base=(table,direct,index)=>{
   // Base模块, 用于绑定元素的基本模块, 选择行元素或是列元素
   // base module, used to bind the table data cell, to choose either row or column
   let countCell;
   // 判断绑定的参数是否为dom元素
   if(direct=='row'){
-       countCell=rowBase(cell);
+       countCell=rowBase(table,index);
        return countCell;
      }
      else{
        if(direct=='col'){
-         countCell=colBase(cell);
+         countCell=colBase(table,index);
          return countCell;
        }
        else

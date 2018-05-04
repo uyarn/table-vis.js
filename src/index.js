@@ -2,6 +2,7 @@
 import bar from './toBars/bar';
 import line from './toLines/line';
 const tabular_vis={
+    initial:false,
     bar:bar,
     line:line
 }

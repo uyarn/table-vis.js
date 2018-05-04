@@ -25,7 +25,7 @@
 <body>
 <h1>Tabular_vis Demo</h1>
 <h3>Players Score Table</h3>
-<table>
+<table id = 'vis_table'>
 <thead>
 <tr>
 <th></th><th>Round1</th><th>Round2</th><th>Round3</th><th>Round4</th><th>Round5</th><th>Round6</th><th>1/16 Final</th><th>1/8 Final</th><th>1/4 Final</th><th>Semi Final</th><th>Final</th>
@@ -36,7 +36,7 @@
   <td>Andy</td><td>92</td><td>73</td><td>84</td><td>15</td><td>22</td><td>93</td><td>14</td><td>54</td><td>71</td><td>92</td><td>93</td>
   </tr>
   <tr>
-  <td>Judy</td><td>82</td><td>83</td><td>24</td><td>51</td><td>62</td><td>31</td><td>64</td><td>15</td><td>20</td><td>94</td><td>95</td>
+  <td>Judy</td><td>82</td><td>83</td><td>24</td><td>51</td><td>62</td><td>31</td><td>64</td><td>15</td><td>20</td><td>94</td><td>99</td>
   </tr>
   <tr>
   <td>John</td><td>52</td><td>13</td><td>4</td><td>5</td><td>21</td><td>23</td><td>14</td><td>20</td><td>22</td><td>13</td><td>14</td>
@@ -60,8 +60,8 @@
 </script>
 <script>
 
-  tabular_vis.line(document.getElementsByTagName('tr')[1],'row');
-
+  tabular_vis.line(document.getElementsByTagName('table')[0],'row',1);
+  tabular_vis.bar(document.getElementById('vis_table'),'col',2);
 
 </script>
 </html>

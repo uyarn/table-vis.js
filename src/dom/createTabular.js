@@ -4,7 +4,7 @@ import className from './className';
 const createTabular=()=>{
   // create the container div;
   let tabularContainer = document.createElement('div');
-
+  tabularContainer.setAttribute('id','tabular_vis');
   className.addClass(tabularContainer,'tabular_container');
   tabularContainer.addEventListener('click',()=>{
     tabularContainer.removeAttribute('style');
