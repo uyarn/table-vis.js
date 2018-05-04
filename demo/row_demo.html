@@ -3,9 +3,6 @@
 <head>
 <meta charset='uft-8'/>
   <style>
-  body{
-    height: 1500px;
-  }
   table{
     margin: 0 auto;
     text-align: center;
@@ -23,7 +20,7 @@
 </style>
 </head>
 <body>
-<h1>Tabular_vis Demo</h1>
+<h1>Table_visualised Row Demo</h1>
 <h3>Players Score Table</h3>
 <table id = 'vis_table'>
 <thead>
@@ -61,7 +58,6 @@
 <script>
 
   tabular_vis.line(document.getElementsByTagName('table')[0],'row',1);
-  tabular_vis.bar(document.getElementById('vis_table'),'col',2);
-  tabular_vis.pie(document.getElementById('vis_table'),'row',6);
+  tabular_vis.bar(document.getElementById('vis_table'),'row',2);
 </script>
 </html>

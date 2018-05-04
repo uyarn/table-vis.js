@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='uft-8'/>
+  <style>
+  table{
+    margin: 0 auto;
+    text-align: center;
+  }
+  h1,h3{
+    text-align: center;
+  }
+  #d2{
+    position: absolute;
+    top:700px;
+  }
+  table td{
+    border: 1px solid #000;
+  }
+</style>
+</head>
+<body>
+<h1>Table_visualised Column Demo</h1>
+<h3>Nation Information Table</h3>
+<table id = 'vis_table'>
+<thead>
+<tr>
+<th>City Name</th><th>Population</th><th>Area</th><th>Ecnonmic</th><th>Pollution</th><th>Round5</th><th>Round6</th>
+</tr>
+</thead>
+<tbody>
+  <tr>
+  <td>City A</td><td>9200</td><td>973</td><td>84</td><td>15</td><td>22</td><td>93</td>
+  </tr>
+  <tr>
+  <td>City B</td><td>8230</td><td>283</td><td>24</td><td>51</td><td>62</td><td>31</td>
+  <tr>
+  <td>City C</td><td>5212</td><td>513</td><td>4</td><td>5</td><td>21</td><td>23</td>
+  </tr>
+  <tr>
+  <td>City D</td><td>10062</td><td>490</td><td>74</td><td>75</td><td>51</td><td>73</td>
+  </tr>
+  <tr>
+  <td>City E</td><td>1472</td><td>713</td><td>84</td><td>85</td><td>21</td><td>43</td>
+  <tr>
+  <td>City F</td><td>2952</td><td>674</td><td>64</td><td>55</td><td>91</td><td>53</td>
+  </tr>
+  <tr>
+  <td>City G</td><td>6663</td><td>680</td><td>64</td><td>65</td><td>71</td><td>39</td>
+  </tr>
+</tbody>
+</table>
+
+<script src="../dist/tabular_vis.min.js">
+</script>
+<script>
+
+  tabular_vis.pie(document.getElementsByTagName('table')[0],'col',1);
+  tabular_vis.bar(document.getElementById('vis_table'),'col',2);
+</script>
+</html>
