@@ -8,7 +8,8 @@ import drawMarkBase from '../base/canvas_base/drawMarkBase';
 import drawBarRect from './drawBarRect';
 
 const drawBar=(data,focI,dire)=>{
-    data = data.map((item)=>{ return parseFloat(item, 10);});
+    data = data.map((item)=>{
+        return parseFloat(item, 10);});
     let width=document.body.clientWidth*0.3;
     let height=width;
     // initial the canvas
@@ -20,9 +21,9 @@ const drawBar=(data,focI,dire)=>{
 
     // draw X 轴
     drawLineBase(ctx,5,height-5,width,height-5);
-    // draw Y 轴
+    // // draw Y 轴
     drawLineBase(ctx,5,height-5,5,0);
-    // draw Mark
+    // // draw Mark
     drawMarkBase(ctx,maxData,data.length,width,height);
     // set bar Style
     let rectStyle=barStyle(ctx);

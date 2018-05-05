@@ -27,6 +27,7 @@ const line=function(table,direction,index){
     else {
       tabular_container = document.getElementById('tabular_vis');
     }
+    
     let regCell = regBase(cell);
     for(let i =0;i<cell.length;i++){
         cellData.push(regCell[i]);

@@ -3,6 +3,8 @@
 const drawBarMark=(ctx,maxData,len,width,height)=>{
       ctx.strokeStyle = 'black';
       let eachMark = parseInt(maxData/len)*2;
+      if(eachMark==0)
+       eachMark = 0.5;
       ctx.textAlign = 'right';
       let i=0;
       ctx.fillText(0,0,height-5);

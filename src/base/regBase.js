@@ -3,14 +3,20 @@
 const regBase=(cell)=>{
   let regCell =[];
   let reg = new RegExp(/^\d+\.?\d*$/);
-  for(let i =0;i<cell.length;i++){
+  for(let i =0;i<cell.length;){
       // 替换千分位中的逗号字符
       let val = cell[i].innerHTML.replace(/\,/g,'');
-      if(!reg.test(val))
+
+      if(!reg.test(val)){
         cell.splice(i,1);
-      else
-        regCell.push(val);
+      }
+      else{
+          regCell.push(val);
+          i++;
+      }
+
   }
+
   return regCell;
 }
 
