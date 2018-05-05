@@ -7,7 +7,7 @@ import drawLineBase from '../base/canvas_base/drawLineBase';
 import drawMarkBase from '../base/canvas_base/drawMarkBase';
 import drawBarRect from './drawBarRect';
 
-const drawBar=(data,focI,dire)=>{
+const drawBar=(data,focI,dire,title)=>{
     data = data.map((item)=>{
         return parseFloat(item, 10);});
     let width=document.body.clientWidth*0.3;
@@ -20,14 +20,14 @@ const drawBar=(data,focI,dire)=>{
     ctx.translate(15,0);
 
     // draw X 轴
-    drawLineBase(ctx,5,height-5,width,height-5);
+    drawLineBase(ctx,5,height-15,width,height-15);
     // // draw Y 轴
-    drawLineBase(ctx,5,height-5,5,0);
+    drawLineBase(ctx,5,height-15,5,0);
     // // draw Mark
     drawMarkBase(ctx,maxData,data.length,width,height);
     // set bar Style
     let rectStyle=barStyle(ctx);
-    drawBarRect(ctx,data,width,height,scale,rectStyle,focI);
+    drawBarRect(ctx,data,width,height,scale,rectStyle,focI,title);
     return ;
 }
 
