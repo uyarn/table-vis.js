@@ -7,15 +7,17 @@ import drawLineBase from '../base/canvas_base/drawLineBase';
 import drawMarkBase from '../base/canvas_base/drawMarkBase';
 import drawBarRect from './drawBarRect';
 
-const drawBar=(data,focI)=>{
+const drawBar=(data,focI,dire)=>{
     data = data.map((item)=>{ return parseInt(item, 10);});
-    let width=document.body.clientWidth*0.3+15,height=400;
+    let width=document.body.clientWidth*0.3;
+    let height=width;
     // initial the canvas
-    let canvas = canvasBase.setCanvas(width,height);
+    let canvas = canvasBase.setCanvas(width,height,dire);
     let ctx = canvas.node().getContext('2d');
     let scale = canvasBase.setScale(height,data);
     let maxData= canvasBase.maxData(data);
     ctx.translate(15,0);
+
     // draw X 轴
     drawLineBase(ctx,5,height-5,width,height-5);
     // draw Y 轴
@@ -25,7 +27,7 @@ const drawBar=(data,focI)=>{
     // set bar Style
     let rectStyle=barStyle(ctx);
     drawBarRect(ctx,data,width,height,scale,rectStyle,focI);
-
+    return ;
 }
 
 

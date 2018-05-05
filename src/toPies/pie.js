@@ -1,6 +1,7 @@
 'use strict';
 
 import base from '../base/base';
+import regBase from '../base/regBase';
 import drawPie from './drawPie';
 // insert css style to head
 import insertCss from '../dom/insertCss';
@@ -13,7 +14,7 @@ const pie=function(table,direction,index){
     let cell= base(table,direction,index);
     let cellData=[];
     let click=false;
-    let reg = new RegExp(/^\d+\.?\d*$/);
+
     let tabular_container;
 
     // to insert the diagram css style
@@ -25,13 +26,11 @@ const pie=function(table,direction,index){
     else {
       tabular_container = document.getElementById('tabular_vis');
     }
+    let regCell = regBase(cell);
+    console.log(regCell)
+    console.log(cell)
     for(let i =0;i<cell.length;i++){
-        if(!reg.test(cell[i].innerHTML)){
-          cell.splice(i,1);
-        }
-    }
-    for(let i =0;i<cell.length;i++){
-        cellData.push(cell[i].innerHTML);
+        cellData.push(regCell[i]);
         // use the indexOf method of Array to get the postion of each cell
         let cellIndex=Array.prototype.indexOf.call(cell,cell[i]);
         // add mouseenter event

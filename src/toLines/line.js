@@ -1,6 +1,8 @@
 'use strict';
 
 import base from '../base/base';
+import regBase from '../base/regBase';
+
 import drawLine from './drawLine';
 // insert css style to head
 import insertCss from '../dom/insertCss';
@@ -25,13 +27,9 @@ const line=function(table,direction,index){
     else {
       tabular_container = document.getElementById('tabular_vis');
     }
+    let regCell = regBase(cell);
     for(let i =0;i<cell.length;i++){
-        if(!reg.test(cell[i].innerHTML)){
-          cell.splice(i,1);
-        }
-    }
-    for(let i =0;i<cell.length;i++){
-        cellData.push(cell[i].innerHTML);
+        cellData.push(regCell[i]);
         // use the indexOf method of Array to get the postion of each cell
         let cellIndex=Array.prototype.indexOf.call(cell,cell[i]);
         // add mouseenter event
@@ -41,8 +39,7 @@ const line=function(table,direction,index){
             // let e=event||window.event;
             click=swapTabularVis(click,tabular_container);
             if(click)
-              drawLine(cellData,cellIndex);
-
+             drawLine(cellData,cellIndex,direction);
           },true);
     }
 }

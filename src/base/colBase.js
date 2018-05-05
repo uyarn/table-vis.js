@@ -3,8 +3,6 @@
 const colBase = (table,col_index)=>{
   if(typeof table=="object")
     {
-      console.log(table)
-
       let selectBody = table.getElementsByTagName('tbody')[0];
       let selectArr  = selectBody.children;
       let tdArr = [];

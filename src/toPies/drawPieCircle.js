@@ -15,7 +15,6 @@ const drawPieCircle=(ctx,data,width,height,scale,total,pie_style,focI)=>{
     ctx.closePath();
     ctx.fill();
 
-
     // draw the remain data circle
     ctx.beginPath();
     //let remainData = total - data[focI];
@@ -23,9 +22,7 @@ const drawPieCircle=(ctx,data,width,height,scale,total,pie_style,focI)=>{
     ctx.arc(arc.x,arc.y,arc.radius,arc.focusCircle,2*Math.PI);
     ctx.fillStyle=pie_style[1];
     ctx.closePath();
-    ctx.fill();
-
-
+    ctx.fill( );
 }
 
 export default drawPieCircle;

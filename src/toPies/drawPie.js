@@ -13,8 +13,9 @@ const drawPie=(data,focI)=>{
     data = data.map((item)=>{
       total=total+parseInt(item, 10);
       return parseInt(item, 10);});
-    let width=document.body.clientWidth*0.3+15,height=400;
     // initial the canvas
+    let width=document.body.clientWidth*0.3;
+    let height=width;
     let canvas = canvasBase.setCanvas(width,height);
     let ctx = canvas.node().getContext('2d');
     let scale = canvasBase.setPieScale(total);
@@ -22,7 +23,6 @@ const drawPie=(data,focI)=>{
     // set bar Style
     let pie_style=pieStyle(ctx);
     drawPieCircle(ctx,data,width,height,scale,total,pie_style,focI);
-
 }
 
 

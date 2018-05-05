@@ -3,6 +3,7 @@
 const swapTabularVis=(click,div)=>{
       if(!click){
         div.style.width=(document.body.clientWidth*0.3)+'px';
+        div.style.height=(document.body.clientWidth*0.3)+'px';
         // to standard browser
         div.style.animation = 'tabular 1s';
         // to Chrome and Safari;
@@ -19,6 +20,7 @@ const swapTabularVis=(click,div)=>{
         }
         else {
           div.style.width=(document.body.clientWidth*0.3)+'px';
+          div.style.height=(document.body.clientWidth*0.3)+'px';
           // to standard browser
           div.style.animation = 'tabular 1s';
           // to Chrome and Safari;
