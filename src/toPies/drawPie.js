@@ -11,8 +11,8 @@ import pieStyle from './pieStyle';
 const drawPie=(data,focI)=>{
     let total=0;
     data = data.map((item)=>{
-      total=total+parseInt(item, 10);
-      return parseInt(item, 10);});
+      total=total+parseFloat(item, 10);
+      return parseFloat(item, 10);});
     // initial the canvas
     let width=document.body.clientWidth*0.3;
     let height=width;

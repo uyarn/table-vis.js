@@ -8,7 +8,7 @@ import drawMarkBase from '../base/canvas_base/drawMarkBase';
 import drawBarRect from './drawBarRect';
 
 const drawBar=(data,focI,dire)=>{
-    data = data.map((item)=>{ return parseInt(item, 10);});
+    data = data.map((item)=>{ return parseFloat(item, 10);});
     let width=document.body.clientWidth*0.3;
     let height=width;
     // initial the canvas

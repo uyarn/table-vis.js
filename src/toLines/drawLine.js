@@ -9,7 +9,7 @@ import drawLinePath from './drawLinePath';
 import lineStyle from './lineStyle';
 
 const drawLine=(data,focI,dire)=>{
-    data = data.map((item)=>{ return parseInt(item, 10);});
+    data = data.map((item)=>{ return parseFloat(item, 10);});
      // initial the canvas
     let width=document.body.clientWidth*0.3;
     let height=width;

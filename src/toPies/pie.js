@@ -27,8 +27,6 @@ const pie=function(table,direction,index){
       tabular_container = document.getElementById('tabular_vis');
     }
     let regCell = regBase(cell);
-    console.log(regCell)
-    console.log(cell)
     for(let i =0;i<cell.length;i++){
         cellData.push(regCell[i]);
         // use the indexOf method of Array to get the postion of each cell
