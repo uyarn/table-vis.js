@@ -26,7 +26,7 @@
   * **Usage**
     * in HTML
       ```javascript
-      <script src="tabular_vis.min.js"></script>
+      <script src="table_vis.min.js"></script>
       <script>
       tabular_vis.bar(getElementsByTagName('table')[0],'row',2);
       </script>
