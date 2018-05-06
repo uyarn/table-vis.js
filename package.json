@@ -1,8 +1,8 @@
 {
-  "name": "table_visualised",
-  "version": "0.0.1",
+  "name": "table-vis",
+  "version": "0.1.0",
   "description": "a Javascript Library for visualising the tabular data selected and adapting the information overload.",
-  "main": "./dist/tabular_vis.js",
+  "main": "./dist/table_vis.js",
   "scripts": {
     "start": "serve demo",
     "build": "rollup -c",

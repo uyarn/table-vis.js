@@ -1,5 +1,5 @@
 'use strict';
-
+import drawPieText from './drawPieText';
 const drawPieCircle=(ctx,data,width,height,scale,total,pie_style,focI)=>{
     // set the radius;
     let arc = {
@@ -23,6 +23,7 @@ const drawPieCircle=(ctx,data,width,height,scale,total,pie_style,focI)=>{
     ctx.fillStyle=pie_style[1];
     ctx.closePath();
     ctx.fill( );
+    drawPieText(ctx,arc.x,arc.y,arc.radius,data[focI],total);
 }
 
 export default drawPieCircle;

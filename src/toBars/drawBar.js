@@ -24,7 +24,7 @@ const drawBar=(data,focI,dire,title)=>{
     // // draw Y 轴
     drawLineBase(ctx,5,height-15,5,0);
     // // draw Mark
-    drawMarkBase(ctx,maxData,data.length,width,height);
+    drawMarkBase(canvas.node(),maxData,data.length,width,height,dire);
     // set bar Style
     let rectStyle=barStyle(ctx);
     drawBarRect(ctx,data,width,height,scale,rectStyle,focI,title);

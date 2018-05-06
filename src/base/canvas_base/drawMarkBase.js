@@ -1,6 +1,8 @@
 'use strict';
 
-const drawBarMark=(ctx,maxData,len,width,height)=>{
+const drawBarMark=(canvas,maxData,len,width,height,dire)=>{
+      let ctx = canvas.getContext('2d');
+      let ctext = canvas.getContext('2d');
       ctx.strokeStyle = 'black';
       let eachMark = parseInt(maxData/len)*2;
       if(eachMark==0)

@@ -2,7 +2,7 @@
 import bar from './toBars/bar';
 import line from './toLines/line';
 import pie from './toPies/pie' ;
-const tabular_vis={
+const table_vis={
     initial:false,
     bar:bar,
     line:line,
@@ -11,4 +11,4 @@ const tabular_vis={
 /*!
  *  exports the module
  */
-export default tabular_vis;
+export default table_vis;

@@ -4,9 +4,9 @@ import uglify from 'rollup-plugin-uglify';
 
 export default [{
 	input: 'src/index.js',
-	name:'tabular_vis',
+	name:'table_vis',
 	output: {
-		file: 'dist/tabular_vis.min.js',
+		file: 'dist/table_vis.min.js',
 		format: 'iife', // immediately-invoked function expression — suitable for <script> tags
 		sourcemap: true
 	},
@@ -19,7 +19,7 @@ export default [{
 {
 	input: 'src/index.js',
 	output:{
-		file:'dist/tabular_vis.js',
+		file:'dist/table_vis.js',
 		format:'cjs'
 	},
 	plugins: [
