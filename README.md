@@ -7,14 +7,22 @@
     * for adapting the information overload.
       * For example, Some table include the percentage data, this library can help web page reduce some table cells.
   * **Install**
-    * npm install table-vis --save
+   ```
+   npm install table-vis --save
+   ```
   * **API**
     * .line() is used to draw line chart
-      * table_vis.line(table,'row'/'col',number);
+      ```
+      table_vis.line(table,'row'/'col',number)
+      ```
     * .bar() is used to draw bar chart
-      * table_vis.bar(table,'row'/'col',number);
+      ``` 
+      table_vis.bar(table,'row'/'col',number)
+      ```
     * .pie() is used to draw pie chart
-      * table_vis.pie(table,'row'/'col',number);
+      ```
+      table_vis.pie(table,'row'/'col',number)
+      ```
   * **Usage**
     * in HTML
       ```javascript
@@ -38,5 +46,5 @@
       line(getElementsByTagName('table')[0],'col',3);
       ```
    * **Example**
-     * column demo page [];
-     * row demo page [];
+     * [column demo page][https://github.com/YarnChen/tabular_vis/edit/master/demo/column_demo.html]
+     * [row demo page][https://github.com/YarnChen/tabular_vis/edit/master/demo/row_demo.html]
