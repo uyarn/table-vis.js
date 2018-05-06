@@ -46,5 +46,5 @@
       line(getElementsByTagName('table')[0],'col',3);
       ```
    * **Example**
-     * [column demo page][https://github.com/YarnChen/tabular_vis/edit/master/demo/column_demo.html]
-     * [row demo page][https://github.com/YarnChen/tabular_vis/edit/master/demo/row_demo.html]
+     * [column demo page](https://github.com/YarnChen/tabular_vis/edit/master/demo/column_demo.html)
+     * [row demo page](https://github.com/YarnChen/tabular_vis/edit/master/demo/row_demo.html)
