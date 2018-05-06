@@ -28,7 +28,7 @@
       ```javascript
       <script src="table_vis.min.js"></script>
       <script>
-      tabular_vis.bar(getElementsByTagName('table')[0],'row',2);
+      table_vis.bar(getElementsByTagName('table')[0],'row',2);
       </script>
       ```
     * Commonjs
