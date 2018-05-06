@@ -1,5 +1,5 @@
 {
-  "name": "table-vis",
+  "name": "table_vis",
   "version": "0.1.0",
   "description": "a Javascript Library for visualising the tabular data selected and adapting the information overload.",
   "main": "./dist/table_vis.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YarnChen/tabular_vis.git"
+    "url": "git+https://github.com/YarnChen/table_visualised.js.git"
   },
   "author": "Yarnchen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/YarnChen/tabular_vis/issues"
+    "url": "https://github.com/YarnChen/table_visualised.js/issues"
   },
-  "homepage": "https://github.com/YarnChen/tabular_vis#readme",
+  "homepage": "https://github.com/YarnChen/table_visualised.js#readme",
   "devDependencies": {
     "mocha": "^5.0.1",
     "rollup": "^0.58.2",
