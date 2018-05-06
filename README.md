@@ -1,6 +1,6 @@
-# table_vis.js
+# table_visualised.js
   * **Version**
-    * table-vis v0.1.0
+    * v0.1.0
   * **What is it**
     * table-vis.js can generate a visualisation as soon as some data values are selected on a data table.
     * for visualising tabular data on demand.
