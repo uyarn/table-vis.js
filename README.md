@@ -8,7 +8,7 @@
       * For example, Some table include the percentage data, this library can help web page reduce some table cells.
   * **Install**
    ```
-   npm install table-vis --save
+   npm install table_vis --save
    ```
   * **API**
     * .line() is used to draw line chart
@@ -33,16 +33,16 @@
       ```
     * Commonjs
       ```javascript
-      const table_vis = require('table-vis');
+      const table_vis = require('table_vis');
       table_vis.bar(getElementsByTagName('table')[0],'row',3);
       ```
     * ES2015
       ```javascript
-      import table_vis from 'table-vis';
+      import table_vis from 'table_vis';
       ```
     * it can be imported partially.
       ```javascript
-      import {line} from 'table-vis'
+      import {line} from 'table_vis'
       line(getElementsByTagName('table')[0],'col',3);
       ```
    * **Example**
