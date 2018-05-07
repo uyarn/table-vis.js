@@ -28,13 +28,13 @@
       ```javascript
       <script src="table_vis.min.js"></script>
       <script>
-      table_vis.bar(getElementsByTagName('table')[0],'row',2);
+      table_vis.bar(document.getElementsByTagName('table')[0],'row',2);
       </script>
       ```
     * Commonjs
       ```javascript
       const table_vis = require('table_vis');
-      table_vis.bar(getElementsByTagName('table')[0],'row',3);
+      table_vis.bar(document.getElementsByTagName('table')[0],'row',3);
       ```
     * ES2015
       ```javascript
