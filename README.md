@@ -1,6 +1,6 @@
 # table_vis.js
   * **Version**
-    * v0.1.0, this version is just the initial version of this library.
+    * 0.1.0, this version is just the initial version of this library.
   * **What is it**
     * table-vis.js can generate a visualisation as soon as some data values are selected on a data table.
     * for visualising tabular data on demand.
@@ -11,40 +11,27 @@
    npm install table_vis --save
    ```
   * **API**
-    * .line() is used to draw line chart
-      ```
+    * .line():draw line charts
+      ```javascript
+      let table = document.getElementById('table');
       table_vis.line(table,'row'/'col',number)
       ```
-    * .bar() is used to draw bar chart
-      ``` 
+    * .bar():draw bar charts
+      ```javascript
+      let table = document.getElementById('table');
       table_vis.bar(table,'row'/'col',number)
       ```
-    * .pie() is used to draw pie chart
-      ```
+    * .pie():draw pie charts
+      ```javascript
+      let table = document.getElementById('table');
       table_vis.pie(table,'row'/'col',number)
       ```
   * **Usage**
     * in HTML
       ```javascript
-      <script src="table_vis.min.js"></script>
-      <script>
-      table_vis.bar(document.getElementsByTagName('table')[0],'row',2);
-      </script>
+       <script src="table_vis.min.js"></script>
+       <script>table_vis.bar(document.getElementsByTagName('table')[0],'row',2)</script>
       ```
-    * Commonjs
-      ```javascript
-      const table_vis = require('table_vis');
-      table_vis.bar(document.getElementsByTagName('table')[0],'row',3);
-      ```
-    * ES2015
-      ```javascript
-      import table_vis from 'table_vis';
-      ```
-    * it can be imported partially.
-      ```javascript
-      import {line} from 'table_vis'
-      line(getElementsByTagName('table')[0],'col',3);
-      ```
-   * **Example**
+  * **Example**
      * [column demo page](https://github.com/YarnChen/tabular_vis/edit/master/demo/column_demo.html)
      * [row demo page](https://github.com/YarnChen/tabular_vis/edit/master/demo/row_demo.html)
