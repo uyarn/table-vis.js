@@ -2,10 +2,9 @@
   * **Version**
     * 0.1.0, this version is just the initial version of this library.
   * **What is it**
-    * table-vis.js can generate a visualisation as soon as some data values are selected on a data table.
+    * table_vis.js can generate a visualisation as soon as some data values are selected on a data table.
     * for visualising tabular data on demand.
     * for adapting the information overload.
-      * For example, Some table include the percentage data, this library can help web page reduce some table cells.
   * **Install**
    ```
    npm install table_vis --save
