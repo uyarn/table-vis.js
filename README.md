@@ -32,6 +32,15 @@
        <script src="table_vis.min.js"></script>
        <script>table_vis.bar(document.getElementsByTagName('table')[0],'row',2)</script>
       ```
+    * Commonjs
+      ```javascript
+      const table_vis = require('table_vis');
+      table_vis.bar(document.getElementsByTagName('table')[0],'row',3);
+      ```
+    * ES2015
+      ```javascript
+      import table_vis from 'table_vis';
+      ```
   * **Example**
      * [column demo page](https://github.com/YarnChen/tabular_vis/edit/master/demo/column_demo.html)
      * [row demo page](https://github.com/YarnChen/tabular_vis/edit/master/demo/row_demo.html)
