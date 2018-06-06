@@ -23,7 +23,7 @@ const drawPie=(data,focI)=>{
     // set bar Style
     let pie_style=pieStyle(ctx);
     drawPieCircle(ctx,data,width,height,scale,total,pie_style,focI);
-    
+
 }
 
 

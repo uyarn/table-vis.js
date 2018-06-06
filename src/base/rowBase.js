@@ -10,7 +10,7 @@ const rowBase = (table,index)=>{
       return [Array.from(row.children),Array.from(title.children)];
     }
   else
-    console.error("the table bind doesn't come from DOM ");
+      console.error("the table bind doesn't come from DOM ");
 }
 
 export default rowBase;
