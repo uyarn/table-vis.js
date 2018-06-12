@@ -1,16 +1,15 @@
 'use strict';
 
-import base from '../base/base';
-import regBase from '../base/regBase';
-
-import drawLine from './drawLine';
+import base from '../_Base/base';
+import regBase from '../_Base/regBase';
+import drawBar from './drawBar';
 // insert css style to head
-import insertCss from '../dom/insertCss';
+import insertCss from '../_DOM/insertCss';
 // create fixed div tabular
-import createTabular from '../dom/createTabular';
-import swapTabularVis from '../dom/swapTabularVis';
+import createTabular from '../_DOM/createTabular';
+import swapTabularVis from '../_DOM/swapTabularVis';
 
-const line=function(table,direction,index){
+const bar=function(table,direction,index){
   // 判断绑定的参数是否为dom元素
     let cell= base(table,direction,index)[0],
         titleCell = base(table,direction,index)[1];
@@ -18,8 +17,9 @@ const line=function(table,direction,index){
     let click=false;
     let reg = new RegExp(/^\d+\.?\d*$/);
     let tabular_container;
-
     // to insert the diagram css style
+
+    // this is to reslove the prolem of choosing multi rows and column
     if(!this.initial){
       insertCss();
       tabular_container=createTabular();
@@ -41,11 +41,11 @@ const line=function(table,direction,index){
             // let e=event||window.event;
             click=swapTabularVis(click,tabular_container);
             if(click)
-             drawLine(cellData,cellIndex,direction,titleCell);
+               drawBar(cellData,cellIndex,direction,titleCell);
           },true);
     }
 }
 /*!
  *  exports the module
  */
-export default line;
+export default bar;
