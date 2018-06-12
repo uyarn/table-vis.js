@@ -1,5 +1,5 @@
 'use strict';
-
+// Used to set Bar chart style.
 const barStyle=(ctx)=>{
   let focusGrad = ctx.createLinearGradient(0,200,0,0);
       focusGrad.addColorStop(0, 'rgba(110,200,245,1)');

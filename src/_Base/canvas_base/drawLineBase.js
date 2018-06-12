@@ -1,12 +1,13 @@
 'use strict';
-
-
+// draw Axis
+// 绘制坐标系。
 const drawBarLine=(ctx,orix,oriy,X,Y)=>{
   ctx.beginPath();
   ctx.moveTo(orix, oriy);
   ctx.lineTo(X, Y);
-  ctx.stroke();
   ctx.closePath();
+  ctx.stroke();
+
 }
 
 export default drawBarLine;
