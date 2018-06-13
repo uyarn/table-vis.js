@@ -10,7 +10,7 @@ import drawBox from './drawBox'
 const drawBoxPlot=(data,index,boxPlotData,dire,titleCell)=>{
     data = data.map((item)=>{
         return parseFloat(item, 10);});
-    let width=document.body.clientWidth*0.3;
+    let width=document.body.clientWidth*0.6;
     let height=width;
     // initial the canvas
 
@@ -25,7 +25,8 @@ const drawBoxPlot=(data,index,boxPlotData,dire,titleCell)=>{
     // // draw Mark
     drawMarkBase(canvas.node(),maxData,data.length,width,height,dire);
     // set bar Style
-    drawBox(ctx,data,width,height,scale,index,boxPlotData,titleCell)
+    drawBox(ctx,data,width,height,scale,index,boxPlotData,titleCell);
+    ctx.scale(2,2);
     return ;
 }
 

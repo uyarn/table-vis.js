@@ -10,7 +10,7 @@ import drawPointCol from './drawPointCol';
 const drawPoint=(data,focI,dire,title)=>{
     data = data.map((item)=>{
         return parseFloat(item, 10);});
-    let width=document.body.clientWidth*0.3;
+    let width=document.body.clientWidth*0.6;
     let height=width;
     // initial the canvas
     let canvas = canvasBase.setCanvas(width,height,dire);
@@ -28,6 +28,8 @@ const drawPoint=(data,focI,dire,title)=>{
     // set bar Style
     let pStyle = pointStyle(ctx);
     drawPointCol(ctx,data,width,height,scale,pStyle,focI,title);
+    ctx.scale(2,2);
+
     return ;
 }
 

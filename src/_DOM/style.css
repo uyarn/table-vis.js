@@ -1,0 +1,13 @@
+@keyframes tabular{ from{ width:0px} to { width:30%} }
+@-webkit-keyframes tabular{ from{ width:0} to { width:30%} }
+@keyframes canvas_key{ from{ height:0} to { height:100%} }
+@-webkit-keyframes canvas_key{ from{ height:0} to { height:100%} }
+.tabular_container {
+  display:inline-block;position:fixed;
+  margin:auto;top:0;
+  left:0;bottom:0;right:0;width:0;height:0;
+  background:rgba(255,255,255,0.7);
+}
+.tabular_container canvas{
+    zoom:0.5;
+  }

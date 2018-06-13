@@ -1,6 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import uglify from 'rollup-plugin-uglify';
+import postcss from 'rollup-plugin-postcss'
 
 export default [{
 	input: 'src/index.js',
@@ -13,7 +14,10 @@ export default [{
 	plugins: [
 		resolve(),
 		commonjs(),
-		uglify()
+		uglify(),
+		postcss({
+      plugins: []
+    })
 	]
 },
 {
@@ -23,6 +27,9 @@ export default [{
 		format:'cjs'
 	},
 	plugins: [
+		postcss({
+      plugins: []
+    }),
 		// resolve(),
 		// commonjs(),
 		uglify()
