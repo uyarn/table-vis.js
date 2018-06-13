@@ -1,10 +1,10 @@
 'use strict';
 // import base modules
-import canvasBase from '../base/canvas_base/canvasBase';
+import canvasBase from '../_Base/canvas_base/canvasBase';
 
 // import draw bar partial function
-import drawLineBase from '../base/canvas_base/drawLineBase';
-import drawMarkBase from '../base/canvas_base/drawMarkBase';
+import drawLineBase from '../_Base/canvas_base/drawLineBase';
+import drawMarkBase from '../_Base/canvas_base/drawMarkBase';
 import drawLinePath from './drawLinePath';
 import lineStyle from './lineStyle';
 
