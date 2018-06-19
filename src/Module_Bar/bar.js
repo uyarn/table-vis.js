@@ -1,6 +1,5 @@
 'use strict';
 
-import base from '../_Base/base';
 import regBase from '../_Base/regBase';
 import drawBar from './drawBar';
 // insert css style to head
@@ -11,8 +10,8 @@ import swapTabularVis from '../_DOM/swapTabularVis';
 
 const bar=function(table,direction,index){
   // 判断绑定的参数是否为dom元素
-    let cell= base(table,direction,index)[0],
-        titleCell = base(table,direction,index)[1];
+    // let cell= base(table,direction,index)[0],
+    //     titleCell = base(table,direction,index)[1];
     let cellData=[];
     let click=false;
     let reg = new RegExp(/^\d+\.?\d*$/);
