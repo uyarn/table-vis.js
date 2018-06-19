@@ -54,7 +54,7 @@
 <script src="../dist/table_vis.min.js">
 </script>
 <script>
-
+  table_vis.vis(document.getElementsByTagName('table')[0]);
   table_vis.boxPlot(document.getElementsByTagName('table')[0],'col',1);
   table_vis.line(document.getElementById('vis_table'),'col',6);
   table_vis.pie(document.getElementById('vis_table'),'col',2);

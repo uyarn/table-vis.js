@@ -7,7 +7,6 @@ const drawBarRect=(ctx,data,width,height,scale,rectStyle,focI,title)=>{
     // set the position of each Rectangle
     ctx.beginPath();
     ctx.rect(scaleX*i+10,height-15,columnWidth,-scale(d));
-    ctx.fill
     // highlight the speical one
     if(i==focI){
         ctx.fillStyle=rectStyle[0];
