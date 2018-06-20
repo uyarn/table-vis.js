@@ -1,9 +1,9 @@
 'use strict';
 // import base modules
-import canvasBase from '../_Base/canvas_base/canvasBase';
+import canvasBase from 'canvasBase';
 // import draw bar partial function
-import drawLineBase from '../_Base/canvas_base/drawLineBase';
-import drawMarkBase from '../_Base/canvas_base/drawMarkBase';
+import drawLineBase from 'drawLineBase';
+import drawMarkBase from 'drawMarkBase';
 
 import drawBox from './drawBox'
 
@@ -13,7 +13,9 @@ const drawBoxPlot=(data,index,boxPlotData,dire,titleCell)=>{
     let width=document.body.clientWidth*0.6;
     let height=width;
     // initial the canvas
-
+    let cavCon=document.querySelector('.tabular_container')
+    if(cavCon.firstElementChild)
+      cavCon.removeChild(cavCon.firstElementChild)
     let canvas = canvasBase.setCanvas(width,height,dire);
     let ctx = canvas.node().getContext('2d');
     let scale = canvasBase.setScale(height,data);

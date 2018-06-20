@@ -17,19 +17,19 @@ const initTable = function(table){
     className.addClass(tBody,'tab_vis_tbody');
     //event delegation 事件委托 tBody代理td事件 利用Js的引用类型是浅拷贝的特点
     let target = { ele:'', rowTitle:'', colTitle:'' }
-    let tabular_container;
+    let tabular_container_fluid;
     // init the canvas element and the title datas.
     if(!this.initial){
       target.rowTitle = rowTitle(table)
       target.colTitle = colTitle(table)
       insertCss();
-      tabular_container=createTabular();
+      tabular_container_fluid=createTabular();
       this.initial = true;
     }
     else {
-      tabular_container = document.getElementById('tabular_vis');
+      tabular_container_fluid = document.querySelector('.tabular_container_fluid');
     }
-    let btnContainer = initBtn(target,tabular_container);
+    let btnContainer = initBtn(target,tabular_container_fluid);
     // 单元格事件委托, 只绑定在tbody上。
     tBody.addEventListener('click',
       ()=>{

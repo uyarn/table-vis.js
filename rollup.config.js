@@ -24,7 +24,10 @@ export default [{
 			line:path.join(__dirname,'src/Module_Line/line'),
 			boxplot:path.join(__dirname,'src/Module_BoxPlot/boxplot'),
 			pie:path.join(__dirname,'src/Module_Pie/pie'),
-			point:path.join(__dirname,'src/Module_Point/point')
+			point:path.join(__dirname,'src/Module_Point/point'),
+			canvasBase:path.join(__dirname,'src/_Canvas/canvasBase'),
+			drawLineBase:path.join(__dirname,'src/_Canvas/drawLineBase'),
+			drawMarkBase:path.join(__dirname,'src/_Canvas/drawMarkBase')
     }),
 		resolve(),
 		commonjs(),
@@ -51,7 +54,10 @@ export default [{
 		 line:path.join(__dirname,'src/Module_Line/line'),
 		 boxplot:path.join(__dirname,'src/Module_BoxPlot/boxplot'),
 		 pie:path.join(__dirname,'src/Module_Pie/pie'),
-		 point:path.join(__dirname,'src/Module_Point/point')
+		 point:path.join(__dirname,'src/Module_Point/point'),
+		 canvasBase:path.join(__dirname,'src/_Canvas/canvasBase'),
+		 drawLineBase:path.join(__dirname,'src/_Canvas/drawLineBase'),
+		 drawMarkBase:path.join(__dirname,'src/_Canvas/drawMarkBase')
 		}),
 		postcss({
       plugins: []

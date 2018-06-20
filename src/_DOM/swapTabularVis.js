@@ -1,34 +1,36 @@
 'use strict';
 
-const swapTabularVis=(click,div)=>{
+const swapTabularVis=(click,ctF)=>{
+      let cavDiv = ctF.querySelector('.tabular_container')
+      // remove canvas everytime
       if(!click){
-        if(div.firstElementChild){
-          div.removeChild(div.firstElementChild)
+        if(cavDiv.firstElementChild){
+          cavDiv.removeChild(cavDiv.firstElementChild)
         }
-        div.style.width=(document.body.clientWidth*0.3)+'px';
-        div.style.height=(document.body.clientWidth*0.3)+'px';
+        ctF.style.width=(document.body.clientWidth*0.35)+'px';
+        ctF.style.height=(document.body.clientWidth*0.4)+'px';
         // to standard browser
-        div.style.animation = 'tabular 1s';
+        ctF.style.animation = 'tabular 1s';
         // to Chrome and Safari;
-        div.style.WebkitAnimation= 'tabular 1s';
-        div.style.cursor = 'pointer';
+        ctF.style.WebkitAnimation= 'tabular 1s';
+        ctF.style.cursor = 'pointer';
         return true;
       }
       else{
-        if(div.style.width!="0px"){
-          div.removeAttribute('style');
-          div.style.width = "0";
-          div.removeChild(div.firstElementChild);
+        if(ctF.style.width!="0px"){
+          ctF.removeAttribute('style');
+          ctF.style.width = "0";
+          ctF.removeChild(ctF.firstElementChild);
           return false;
         }
         else {
-          div.style.width=(document.body.clientWidth*0.3)+'px';
-          div.style.height=(document.body.clientWidth*0.3)+'px';
+          ctF.style.width=(document.body.clientWidth*0.35)+'px';
+          ctF.style.height=(document.body.clientWidth*0.4)+'px';
           // to standard browser
-          div.style.animation = 'tabular 1s';
+          ctF.style.animation = 'tabular 1s';
           // to Chrome and Safari;
-          div.style.WebkitAnimation= 'tabular 1s';
-          div.style.cursor = 'pointer';
+          ctF.style.WebkitAnimation= 'tabular 1s';
+          ctF.style.cursor = 'pointer';
           return true;
         }
       }

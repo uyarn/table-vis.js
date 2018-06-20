@@ -6,7 +6,8 @@ import colData from 'colData'
 import rowData from 'rowData'
 import bar from 'bar'
 
-const initBtn = function (target,tabular_container){
+const initBtn = function (target,tcf){
+  // tcf = tcf
   let btnContainer = document.createElement('div');
   let btnBox = document.createElement('div');
   // add style of btn
@@ -27,15 +28,23 @@ const initBtn = function (target,tabular_container){
   // row button event
   rowBtn.addEventListener('click',()=>{
     btnContainer.style.display='none';
-    let row = rowData(target.ele,target.rowTitle)
-    swapTabularVis(click,tabular_container);
-    bar(row.data,row.index,'row',row.title)
+    let row = rowData(target.ele,target.rowTitle);
+    tcf.setAttribute('data-on',row.data)
+    tcf.setAttribute('data-title',row.title)
+    tcf.setAttribute('data-index',row.index)
+    tcf.setAttribute('data-status','row')
+    swapTabularVis(click,tcf);
+    bar(row.data,row.index,'row',row.title);
   })
   // column button event
   columnBtn.addEventListener('click',()=>{
     btnContainer.style.display='none'
     let col = colData(target.ele,target.colTitle)
-    swapTabularVis(click,tabular_container);
+    tcf.setAttribute('data-on',col.data)
+    tcf.setAttribute('data-title',col.title)
+    tcf.setAttribute('data-index',col.index)
+    tcf.setAttribute('data-status','col')
+    swapTabularVis(click,tcf);
     bar(col.data,col.index,'col',col.title)
   })
   return btnContainer;
