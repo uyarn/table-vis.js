@@ -1,6 +1,6 @@
 'use strict';
 // Used to modify the format of numberical data.
-const regBase=(cell)=>{
+const regData=(cell)=>{
   let regCell =[];
   let title =[];
   let reg = new RegExp(/^\d+\.?\d*$/);
@@ -17,7 +17,7 @@ const regBase=(cell)=>{
           i++;
       }
   }
-  return [regCell,title];
+  return { data:regCell, title:title };
 }
 
-export default regBase;
+export default regData;

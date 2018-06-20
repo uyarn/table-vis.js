@@ -2,6 +2,9 @@
 
 const swapTabularVis=(click,div)=>{
       if(!click){
+        if(div.firstElementChild){
+          div.removeChild(div.firstElementChild)
+        }
         div.style.width=(document.body.clientWidth*0.3)+'px';
         div.style.height=(document.body.clientWidth*0.3)+'px';
         // to standard browser

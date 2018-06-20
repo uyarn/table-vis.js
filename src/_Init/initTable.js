@@ -1,8 +1,11 @@
 'use strict'
 // Initial the table.
 import './table_vis_style.css'
-import className from '../_DOM/className'
+import className from 'className'
 // init Click Btn
+import insertCss from '../_DOM/insertCss'
+import createTabular from '../_DOM/createTabular'
+
 import initBtn from './_InitBtn/initBtn'
 import colTitle from './_InitTitle/colTitle'
 import rowTitle from './_InitTitle/rowTitle'
@@ -12,14 +15,22 @@ const initTable = function(table){
     // change the cursor style.
     //改变样式 cursor:pointer
     className.addClass(tBody,'tab_vis_tbody');
-    //event delegation 事件委托 tBody代理td事件
-    //利用Js的引用类型是浅拷贝的特点
-
+    //event delegation 事件委托 tBody代理td事件 利用Js的引用类型是浅拷贝的特点
     let target = { ele:'', rowTitle:'', colTitle:'' }
-    target.rowTitle = rowTitle(table)
-    target.colTitle = colTitle(table)
-
-    let btnContainer = initBtn(target);
+    let tabular_container;
+    // init the canvas element and the title datas.
+    if(!this.initial){
+      target.rowTitle = rowTitle(table)
+      target.colTitle = colTitle(table)
+      insertCss();
+      tabular_container=createTabular();
+      this.initial = true;
+    }
+    else {
+      tabular_container = document.getElementById('tabular_vis');
+    }
+    let btnContainer = initBtn(target,tabular_container);
+    // 单元格事件委托, 只绑定在tbody上。
     tBody.addEventListener('click',
       ()=>{
         let e = event || window.event;
@@ -32,5 +43,4 @@ const initTable = function(table){
         target.ele=e.target
       })
 }
-
 export default initTable;

@@ -17,7 +17,14 @@ export default [{
 			reslove:['.js'],
     	className: path.join(__dirname,'src/_DOM/className'),
 			colData: path.join(__dirname,'src/_Data/colData'),
-			rowData: path.join(__dirname,'src/_Data/rowData')
+			swapTabularVis:path.join(__dirname,'src/_DOM/swapTabularVis'),
+			rowData: path.join(__dirname,'src/_Data/rowData'),
+			indexData: path.join(__dirname,'src/_Data/indexData'),
+			bar:path.join(__dirname,'src/Module_Bar/bar'),
+			line:path.join(__dirname,'src/Module_Line/line'),
+			boxplot:path.join(__dirname,'src/Module_BoxPlot/boxplot'),
+			pie:path.join(__dirname,'src/Module_Pie/pie'),
+			point:path.join(__dirname,'src/Module_Point/point')
     }),
 		resolve(),
 		commonjs(),
@@ -38,7 +45,13 @@ export default [{
 		 reslove:['.js'],
  		 className: path.join(__dirname,'src/_DOM/className'),
 		 colData: path.join(__dirname,'src/_Data/colData'),
-		 rowData: path.join(__dirname,'src/_Data/rowData')
+		 rowData: path.join(__dirname,'src/_Data/rowData'),
+		 indexData: path.join(__dirname,'src/_Data/indexData'),
+		 bar:path.join(__dirname,'src/Module_Bar/bar'),
+		 line:path.join(__dirname,'src/Module_Line/line'),
+		 boxplot:path.join(__dirname,'src/Module_BoxPlot/boxplot'),
+		 pie:path.join(__dirname,'src/Module_Pie/pie'),
+		 point:path.join(__dirname,'src/Module_Point/point')
 		}),
 		postcss({
       plugins: []
