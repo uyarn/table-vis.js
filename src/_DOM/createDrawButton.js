@@ -48,7 +48,7 @@ const createDrawButton=()=>{
     line(data.split(','),index,status,title.split(','))
   });
   buttonContainer.appendChild(lineBtn)
-  
+
   // box plot btn
   let boxplotBtn = document.createElement('button');
   boxplotBtn.innerHTML = 'boxPlot'

@@ -5,6 +5,7 @@ import swapTabularVis from 'swapTabularVis'
 import colData from 'colData'
 import rowData from 'rowData'
 import bar from 'bar'
+import initHead from '../initHead'
 
 const initBtn = function (target,tcf){
   // tcf = tcf
@@ -32,7 +33,10 @@ const initBtn = function (target,tcf){
     tcf.setAttribute('data-on',row.data)
     tcf.setAttribute('data-title',row.title)
     tcf.setAttribute('data-index',row.index)
+    tcf.setAttribute('data-head',target.colTitle[row.index].innerHTML)
     tcf.setAttribute('data-status','row')
+
+    tcf.insertBefore(initHead(),tcf.querySelector('.tabular_container'));
     swapTabularVis(click,tcf);
     bar(row.data,row.index,'row',row.title);
   })
@@ -44,6 +48,9 @@ const initBtn = function (target,tcf){
     tcf.setAttribute('data-title',col.title)
     tcf.setAttribute('data-index',col.index)
     tcf.setAttribute('data-status','col')
+    tcf.setAttribute('data-head',target.rowTitle[col.index].innerHTML)
+    
+    tcf.insertBefore(initHead(),tcf.querySelector('.tabular_container'));
     swapTabularVis(click,tcf);
     bar(col.data,col.index,'col',col.title)
   })

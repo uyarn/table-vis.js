@@ -10,8 +10,8 @@ const canvasBase={
      .append("canvas")
      .attr("width", width)
      .attr("height", height)
-     .style("animation",'canvas_key 1s')
-     .style("WebkitAnimation",'canvas_key 1s');
+     .style("animation",'canvasKey 1s')
+     .style("WebkitAnimation",'canvasKey 1s');
      if(dire == 'col')
       d3s.select('.tabular_container').select('canvas').style('transform','rotate(90deg)');
      return canvas;

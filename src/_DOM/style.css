@@ -1,9 +1,16 @@
-@keyframes tabular{ from{ width:0px} to { width:35%} }
+/*@keyframes tabular{ from{ width:0px} to { width:35%} }*/
+/*@-webkit-keyframes tabular{ from{ width:0} to { width:35%} }*/
 
-@-webkit-keyframes tabular{ from{ width:0} to { width:35%} }
-
-@keyframes canvas_key{ from{ height:0} to { height:100%} }
-@-webkit-keyframes canvas_key{ from{ height:0} to { height:100%} }
+@keyframes canvaKey{
+  0% { opacity:0; }
+  25% { opacity:0.3; }
+  50% { opacity:0.5;}
+  100% {opacity:1; }}
+@-webkit-keyframes canvasKey{
+  0% { opacity:0; }
+  25% { opacity:0.3; }
+  50% { opacity:0.5;}
+  100% {opacity:1; }}
 .tabular_container_fluid{
   display:inline-block;
   position:fixed;
@@ -22,7 +29,7 @@
 }
 .tabular_container_fluid .tabular_container canvas{
     zoom:0.5;
-  }
+}
 .tabular_container_fluid #tabular_vis_btn{
   margin:0px auto;
   text-align: center;
@@ -30,4 +37,9 @@
   width: 100%;
   margin-bottom:10px;
   overflow: hidden;
+}
+
+.tabular_container_fluid h3
+{
+  text-align: center;
 }

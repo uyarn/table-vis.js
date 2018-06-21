@@ -6,13 +6,14 @@ const drawBox = (ctx,data,width,height,scale,index,boxPlotData,titleCell)=>{
       // draw max min value line;
       ctx.strokeStyle='#000000';
       ctx.fillStyle='#000000';
+      ctx.font='20px Arial';
       let maxPos = height-scale(boxPlotData.max)-10;
       let minPos = height-scale(boxPlotData.min)-10;
       let middlePos = height -scale(boxPlotData.middle)-10
       let rectY = height -scale (boxPlotData.q3)-10;
       let rectH = scale (boxPlotData.q3-boxPlotData.q1);
 
-      //
+      //max and min data
       ctx.moveTo(width*0.4,maxPos);
       ctx.lineTo(width*0.5,maxPos);
       ctx.fillText(boxPlotData.max,width*0.7,maxPos)
@@ -37,7 +38,7 @@ const drawBox = (ctx,data,width,height,scale,index,boxPlotData,titleCell)=>{
       ctx.fillText('middle',width*0.8,middlePos)
       ctx.stroke();
 
-      
+
       ctx.beginPath();
       ctx.strokeStyle='#108AEC';
       ctx.fillStyle='#108AEC';

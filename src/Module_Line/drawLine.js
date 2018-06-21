@@ -18,15 +18,15 @@ const drawLine=(data,focI,dire,title)=>{
       cavCon.removeChild(cavCon.firstElementChild)
     let canvas = canvasBase.setCanvas(width,height,dire);
     let ctx = canvas.node().getContext('2d');
-    let scale = canvasBase.setScale(height,data);
+    let scale = canvasBase.setScale(height-30,data);
     let maxData= canvasBase.maxData(data);
     ctx.translate(15,0);
     // draw X 轴
-    drawLineBase(ctx,5,height-15,width,height-15);
+    drawLineBase(ctx,5,height-20,width,height-20);
     // // draw Y 轴
-    drawLineBase(ctx,5,height-15,5,0);
+    drawLineBase(ctx,5,height-20,5,0);
     // draw Mark
-    drawMarkBase(canvas.node(),maxData,data.length,width,height,dire);
+    drawMarkBase(canvas.node(),maxData,data.length,width,height-20,scale,dire);
     // set bar Style
     let line_style=lineStyle();
     drawLinePath(ctx,data,width,height,scale,line_style,focI,title);
