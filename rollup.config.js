@@ -7,6 +7,11 @@ const path = require('path')
 export default [{
 	input: 'src/index.js',
 	name:'table_vis',
+	watch:{
+    chokidar:{
+			swapTabularVis:path.join(__dirname,'src/_DOM/swapTabularVis')
+		}
+	},
 	output: {
 		file: 'dist/table_vis.min.js',
 		format: 'iife', // immediately-invoked function expression — suitable for <script> tags

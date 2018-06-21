@@ -2,7 +2,8 @@
 
 const drawBarRect=(ctx,data,width,height,scale,rectStyle,focI,title)=>{
   let columnWidth = (width/data.length)*0.8;
-  let scaleX =(width/data.length)*0.92;
+  let scaleX =(width/data.length)*0.98;
+  ctx.font='20px Arial';
   data.forEach(function(d,i) {
     // set the position of each Rectangle
     ctx.beginPath();
@@ -21,9 +22,11 @@ const drawBarRect=(ctx,data,width,height,scale,rectStyle,focI,title)=>{
     ctx.beginPath();
     ctx.fillStyle = 'rgba(0,0,0,1)';
     ctx.textAlign = 'center';
-    ctx.fillText(title[i],scaleX*i+25,height,25);
+    //title
+    ctx.fillText(title[i],scaleX*i+10+columnWidth/2,height,columnWidth);
+    // number
     ctx.fillStyle = 'rgba(255,255,255,1)';
-    ctx.fillText(d,scaleX*i+25,height-scale(d),25)
+    ctx.fillText(d,scaleX*i+10+columnWidth/2,height-scale(d)+10,columnWidth)
   });
 }
 

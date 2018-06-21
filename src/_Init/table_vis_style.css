@@ -16,6 +16,7 @@
   height: 100%;
   background-color: #fff;
   border: 1px solid #c1c1c1;
+  border-radius: 3px;
 }
 .tab_vis_btn:before,.tab_vis_btn:after{
   content: ' ';

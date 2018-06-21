@@ -1,5 +1,7 @@
-@keyframes tabular{ from{ width:0px} to { width:30%} }
-@-webkit-keyframes tabular{ from{ width:0} to { width:30%} }
+@keyframes tabular{ from{ width:0px} to { width:35%} }
+
+@-webkit-keyframes tabular{ from{ width:0} to { width:35%} }
+
 @keyframes canvas_key{ from{ height:0} to { height:100%} }
 @-webkit-keyframes canvas_key{ from{ height:0} to { height:100%} }
 .tabular_container_fluid{
