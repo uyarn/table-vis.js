@@ -30,7 +30,7 @@ const drawPoint=(data,focI,dire,title)=>{
     drawMarkBase(canvas.node(),maxData,data.length,width,height-20,scale,dire);
     // set bar Style
     let pStyle = pointStyle(ctx);
-    drawPointCol(ctx,data,width,height,scale,pStyle,focI,title);
+    drawPointCol(ctx,data,width,height-20,scale,pStyle,focI,title);
     ctx.scale(2,2);
 
     return ;
