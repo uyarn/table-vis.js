@@ -20,13 +20,10 @@ const drawLinePath=(ctx,data,width,height,scale,lineStyle,focI,title)=>{
           ctx.font='22px Arial'
           ctx.fillStyle= lineStyle[0];
           ctx.fillText(d,eachLen*i+(eachLen/2),height-scale(d)-20);
-
         }
       else{
-
           ctx.fillStyle= lineStyle[1];
           ctx.fillText(d,eachLen*i+(eachLen/2),height-scale(d)-20);
-
         }
     ctx.closePath();
     ctx.fill();
