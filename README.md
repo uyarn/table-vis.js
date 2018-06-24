@@ -1,6 +1,6 @@
 # table_vis.js
   * **Version**
-    * 0.2.0
+    * 0.2.2
   * **What is it**
     * table_vis.js can generate a visualisation as soon as some data values are selected on a data table.
       * When users click any data values on the data table implemented **table_vis.js**, a button component consisting of ROW button and COL button display. once the ROW button is clicked, **table_vis.js** will collect the data in the same row as the clicked data and draw the visualisation to compare them while the COL button is used to compare the column data.

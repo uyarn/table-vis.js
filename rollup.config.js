@@ -4,6 +4,23 @@ import uglify from 'rollup-plugin-uglify';
 import postcss from 'rollup-plugin-postcss';
 import alias from 'rollup-plugin-alias';
 const path = require('path')
+const aliasList =
+	{
+		reslove:['.js'],
+		className: path.join(__dirname,'src/_DOM/className'),
+		colData: path.join(__dirname,'src/_Data/colData'),
+		swapTabularVis:path.join(__dirname,'src/_DOM/swapTabularVis'),
+		rowData: path.join(__dirname,'src/_Data/rowData'),
+		indexData: path.join(__dirname,'src/_Data/indexData'),
+		bar:path.join(__dirname,'src/Module_Bar/bar'),
+		line:path.join(__dirname,'src/Module_Line/line'),
+		boxplot:path.join(__dirname,'src/Module_BoxPlot/boxplot'),
+		pie:path.join(__dirname,'src/Module_Pie/pie'),
+		point:path.join(__dirname,'src/Module_Point/point'),
+		canvasBase:path.join(__dirname,'src/_Canvas/canvasBase'),
+		drawLineBase:path.join(__dirname,'src/_Canvas/drawLineBase'),
+		drawMarkBase:path.join(__dirname,'src/_Canvas/drawMarkBase')
+	}
 export default [{
 	input: 'src/index.js',
 	name:'table_vis',
@@ -18,22 +35,7 @@ export default [{
 		sourcemap: true
 	},
 	plugins: [
-	  alias({
-			reslove:['.js'],
-    	className: path.join(__dirname,'src/_DOM/className'),
-			colData: path.join(__dirname,'src/_Data/colData'),
-			swapTabularVis:path.join(__dirname,'src/_DOM/swapTabularVis'),
-			rowData: path.join(__dirname,'src/_Data/rowData'),
-			indexData: path.join(__dirname,'src/_Data/indexData'),
-			bar:path.join(__dirname,'src/Module_Bar/bar'),
-			line:path.join(__dirname,'src/Module_Line/line'),
-			boxplot:path.join(__dirname,'src/Module_BoxPlot/boxplot'),
-			pie:path.join(__dirname,'src/Module_Pie/pie'),
-			point:path.join(__dirname,'src/Module_Point/point'),
-			canvasBase:path.join(__dirname,'src/_Canvas/canvasBase'),
-			drawLineBase:path.join(__dirname,'src/_Canvas/drawLineBase'),
-			drawMarkBase:path.join(__dirname,'src/_Canvas/drawMarkBase')
-    }),
+	  alias(aliasList),
 		resolve(),
 		commonjs(),
 		uglify(),
@@ -49,21 +51,7 @@ export default [{
 		format:'cjs'
 	},
 	plugins: [
-		alias({
-		 reslove:['.js'],
- 		 className: path.join(__dirname,'src/_DOM/className'),
-		 colData: path.join(__dirname,'src/_Data/colData'),
-		 rowData: path.join(__dirname,'src/_Data/rowData'),
-		 indexData: path.join(__dirname,'src/_Data/indexData'),
-		 bar:path.join(__dirname,'src/Module_Bar/bar'),
-		 line:path.join(__dirname,'src/Module_Line/line'),
-		 boxplot:path.join(__dirname,'src/Module_BoxPlot/boxplot'),
-		 pie:path.join(__dirname,'src/Module_Pie/pie'),
-		 point:path.join(__dirname,'src/Module_Point/point'),
-		 canvasBase:path.join(__dirname,'src/_Canvas/canvasBase'),
-		 drawLineBase:path.join(__dirname,'src/_Canvas/drawLineBase'),
-		 drawMarkBase:path.join(__dirname,'src/_Canvas/drawMarkBase')
-		}),
+		alias(aliasList),
 		postcss({
       plugins: []
     }),
