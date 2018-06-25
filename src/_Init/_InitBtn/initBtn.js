@@ -27,7 +27,8 @@ const initBtn = function (target,tcf){
   // append button container
   document.body.appendChild(btnContainer);
   // row button event
-  rowBtn.addEventListener('click',()=>{
+  rowBtn.addEventListener('click',function(){
+    console.log(this)
     btnContainer.style.display='none';
     let row = rowData(target.ele,target.rowTitle);
     let headInx = colData(target.ele,target.colTitle).index
