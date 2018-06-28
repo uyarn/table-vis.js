@@ -1,5 +1,6 @@
 'use strict'
-// Initial the table.
+// this files is used to initial the table.
+// import style files
 import './table_vis_style.css'
 import className from 'className'
 // init Click Btn
@@ -23,13 +24,13 @@ const initTable = function(table){
       target.rowTitle = rowTitle(table)
       target.colTitle = colTitle(table)
       insertCss();
-      tabular_container_fluid=createTabular();
+      tabular_container_fluid=createTabular(this);
       this.initial = true;
     }
     else {
       tabular_container_fluid = document.querySelector('.tabular_container_fluid');
     }
-    let btnContainer = initBtn(target,tabular_container_fluid);
+    let btnContainer = initBtn(target,tabular_container_fluid,this);
     // 单元格事件委托, 只绑定在tbody上。
     tBody.addEventListener('click',
       ()=>{
@@ -43,4 +44,5 @@ const initTable = function(table){
         target.ele=e.target
       })
 }
+
 export default initTable;

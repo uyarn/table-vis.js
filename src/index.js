@@ -1,10 +1,16 @@
 'use strict';
+// index file
 import initTable from './_Init/initTable';
+
+let vis_table={}
 
 const table_vis={
     initial:false,
-    vis:initTable //init the tBody, make it clickable
+    data:{},
+    //init the tBody
+    vis:initTable
 }
+
 /*!
  *  exports the module
  */

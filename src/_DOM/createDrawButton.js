@@ -7,8 +7,9 @@ import boxplot from 'boxplot';
 import point from 'point';
 import createIcon from './createIcon'
 
-const createDrawButton=()=>{
+const createDrawButton=(table_vis)=>{
   // create the container div;
+  let d = table_vis.data;
   let buttonContainer = document.createElement('div');
   buttonContainer.setAttribute('id','tabular_vis_btn');
   let icon = createIcon();
@@ -16,12 +17,9 @@ const createDrawButton=()=>{
   let barBtn = document.createElement('button');
   barBtn.appendChild(icon[0]);
   barBtn.addEventListener('click',()=>{
-    let ctf = document.querySelector('.tabular_container_fluid')
-    let data = ctf.getAttribute('data-on');
-    let index = ctf.getAttribute('data-index')
-    let title = ctf.getAttribute('data-title')
-    let status =ctf.getAttribute('data-status')
-    bar(data.split(','),index,status,title.split(','))
+
+    let dArr = [d.data,d.index,d.status,d.title];
+    bar(...dArr)
   });
   buttonContainer.appendChild(barBtn);
 
@@ -29,10 +27,8 @@ const createDrawButton=()=>{
   let pieBtn = document.createElement('button');
   pieBtn.appendChild(icon[1])
   pieBtn.addEventListener('click',()=>{
-    let ctf = document.querySelector('.tabular_container_fluid')
-    let data = ctf.getAttribute('data-on');
-    let index = ctf.getAttribute('data-index')
-    pie(data.split(','),index)
+    let dArr = [d.data,d.index];
+    pie(...dArr)
   });
   buttonContainer.appendChild(pieBtn)
 
@@ -40,12 +36,8 @@ const createDrawButton=()=>{
   let lineBtn = document.createElement('button');
   lineBtn.appendChild(icon[2])
   lineBtn.addEventListener('click',function(){
-    let ctf = document.querySelector('.tabular_container_fluid')
-    let data = ctf.getAttribute('data-on');
-    let index = ctf.getAttribute('data-index')
-    let title = ctf.getAttribute('data-title')
-    let status =ctf.getAttribute('data-status')
-    line(data.split(','),index,status,title.split(','))
+    let dArr = [d.data,d.index,d.status,d.title];
+    line(...dArr);
   });
   buttonContainer.appendChild(lineBtn)
 
@@ -53,24 +45,16 @@ const createDrawButton=()=>{
   let boxplotBtn = document.createElement('button');
   boxplotBtn.innerHTML = 'boxPlot'
   boxplotBtn.addEventListener('click',()=>{
-    let ctf = document.querySelector('.tabular_container_fluid')
-    let data = ctf.getAttribute('data-on');
-    let index = ctf.getAttribute('data-index')
-    let title = ctf.getAttribute('data-title')
-    let status =ctf.getAttribute('data-status')
-    boxplot(data.split(','),index,status,title.split(','))
+    let dArr = [d.data,d.index,d.status,d.title];
+    boxplot(...dArr);
   });
   buttonContainer.appendChild(boxplotBtn)
   // point btn
   let pointBtn = document.createElement('button');
   pointBtn.innerHTML = 'point'
   pointBtn.addEventListener('click',()=>{
-    let ctf = document.querySelector('.tabular_container_fluid')
-    let data = ctf.getAttribute('data-on');
-    let index = ctf.getAttribute('data-index')
-    let title = ctf.getAttribute('data-title')
-    let status =ctf.getAttribute('data-status')
-    point(data.split(','),index,status,title.split(','))
+    let dArr = [d.data,d.index,d.status,d.title];
+    point(...dArr)
   });
   buttonContainer.appendChild(pointBtn)
   return buttonContainer;

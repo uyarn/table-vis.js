@@ -7,7 +7,7 @@ import rowData from 'rowData'
 import bar from 'bar'
 import initHead from '../initHead'
 
-const initBtn = function (target,tcf){
+const initBtn = (target,tcf,table_vis) => {
   // tcf = tcf
   let btnContainer = document.createElement('div');
   let btnBox = document.createElement('div');
@@ -27,21 +27,20 @@ const initBtn = function (target,tcf){
   // append button container
   document.body.appendChild(btnContainer);
   // row button event
-  rowBtn.addEventListener('click',function(){
-    console.log(this)
+
+  rowBtn.addEventListener('click',()=>{
     btnContainer.style.display='none';
     let row = rowData(target.ele,target.rowTitle);
-    let headInx = colData(target.ele,target.colTitle).index
+    let headInx = colData(target.ele,target.colTitle).index;
 
-    tcf.setAttribute('data-on',row.data)
-    tcf.setAttribute('data-title',row.title)
-    tcf.setAttribute('data-index',row.index)
-    tcf.setAttribute('data-head',target.colTitle[headInx].innerHTML)
-    tcf.setAttribute('data-status','row')
-    if(tcf.querySelector('h3'))
-      tcf.querySelector('h3').innerHTML=target.colTitle[headInx].innerHTML;
-    else
-      tcf.insertBefore(initHead(),tcf.querySelector('.tabular_container'));
+    Object.assign(table_vis.data,{
+       data:row.data,
+       title:row.title,
+       index:row.index,
+       head:target.colTitle[headInx].innerHTML,
+       status:'row'});
+    // init head of table_vis
+    tcf.insertBefore(initHead(tcf,table_vis.data.head),tcf.querySelector('.tabular_container'));
     swapTabularVis(click,tcf);
     bar(row.data,row.index,'row',row.title);
   })
@@ -49,17 +48,17 @@ const initBtn = function (target,tcf){
   columnBtn.addEventListener('click',()=>{
     btnContainer.style.display='none'
     let col = colData(target.ele,target.colTitle)
-    let headInx = rowData(target.ele,target.rowTitle).index
+    let headInx = rowData(target.ele,target.rowTitle).index;
 
-    tcf.setAttribute('data-on',col.data)
-    tcf.setAttribute('data-title',col.title)
-    tcf.setAttribute('data-index',col.index)
-    tcf.setAttribute('data-status','col')
-    tcf.setAttribute('data-head',target.rowTitle[headInx].innerHTML)
-    if(tcf.querySelector('h3'))
-      tcf.querySelector('h3').innerHTML=target.rowTitle[headInx].innerHTML;
-    else
-      tcf.insertBefore(initHead(),tcf.querySelector('.tabular_container'));
+    Object.assign(table_vis.data,{
+       data:col.data,
+       title:col.title,
+       index:col.index,
+       head:target.rowTitle[headInx].innerHTML,
+       status:'col'});
+
+    // init head of table_vis
+    tcf.insertBefore(initHead(tcf,table_vis.data.head),tcf.querySelector('.tabular_container'));
     swapTabularVis(click,tcf);
     bar(col.data,col.index,'col',col.title)
   })

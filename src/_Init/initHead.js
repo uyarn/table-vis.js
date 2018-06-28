@@ -1,11 +1,20 @@
 'use strict'
 
-const initHead =()=>{
-   let head = document.createElement('h3');
-   let ctf = document.querySelector('.tabular_container_fluid')
-   head.innerHTML = ctf.getAttribute('data-head')
-   return head;
-}
+// init the header of tabular_vis component
 
+const initHead =(tcf,headCtx)=>{
+   // create the <h3> element.
+   if(tcf.querySelector('h3')){
+      tcf.querySelector('h3').innerHTML=headCtx;
+      return ;
+    }
+
+   else{
+     let head = document.createElement('h3');
+     head.innerHTML = headCtx;
+     return head;
+   }
+
+}
 
 export default initHead;

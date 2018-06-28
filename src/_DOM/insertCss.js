@@ -10,7 +10,6 @@ const insertCss=()=>{
   fontawesome.library.add(faChartPie)
   fontawesome.library.add(faChartLine)
   console.log('Insert Tabluar-vis Css done!')
-  
 }
 
 export default insertCss;
