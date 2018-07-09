@@ -16,10 +16,10 @@ const drawBox = (ctx,data,width,height,scale,index,boxPlotData,titleCell)=>{
       //max and min data
       ctx.moveTo(width*0.4,maxPos);
       ctx.lineTo(width*0.5,maxPos);
-      ctx.fillText(boxPlotData.max,width*0.7,maxPos)
+      ctx.fillText('Max',width*0.7,maxPos)
       ctx.moveTo(width*0.4,minPos);
       ctx.lineTo(width*0.5,minPos);
-      ctx.fillText(boxPlotData.min,width*0.7,minPos)
+      ctx.fillText('Min',width*0.7,minPos)
       ctx.moveTo(width*0.45,maxPos);
       ctx.lineTo(width*0.45,minPos);
       ctx.stroke();
@@ -35,7 +35,7 @@ const drawBox = (ctx,data,width,height,scale,index,boxPlotData,titleCell)=>{
       ctx.fillStyle='#000';
       ctx.moveTo(width*0.3,middlePos);
       ctx.lineTo(width*0.6,middlePos);
-      ctx.fillText('middle',width*0.8,middlePos)
+      ctx.fillText('Middle',width*0.8,middlePos)
       ctx.stroke();
 
 
@@ -43,12 +43,11 @@ const drawBox = (ctx,data,width,height,scale,index,boxPlotData,titleCell)=>{
       ctx.strokeStyle='#108AEC';
       ctx.fillStyle='#108AEC';
       let focPos =  height-scale(data[index])-10;
-      ctx.moveTo(width*0.3,focPos);
-      ctx.lineTo(width*0.6,focPos);
-      ctx.lineWidth='3'
-      ctx.font='10'
-      ctx.fillText(data[index],width*0.8,focPos);
-      ctx.stroke();
+      ctx.arc(width*0.5,focPos,10,0,Math.PI*2)
+      ctx.font='20px Arial'
+      ctx.fillText(data[index],width*0.2,focPos);
+      ctx.fill();
+      // ctx.stroke();
 }
 
 export default drawBox;
