@@ -20,6 +20,7 @@ const createDrawButton=(table_vis)=>{
 
     let dArr = [d.data,d.index,d.status,d.title];
     bar(...dArr)
+    
   });
   buttonContainer.appendChild(barBtn);
 
@@ -27,7 +28,7 @@ const createDrawButton=(table_vis)=>{
   let pieBtn = document.createElement('button');
   pieBtn.appendChild(icon[1])
   pieBtn.addEventListener('click',()=>{
-    let dArr = [d.data,d.index];
+    let dArr = [d.data,d.index,d.title];
     pie(...dArr)
   });
   buttonContainer.appendChild(pieBtn)

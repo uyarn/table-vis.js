@@ -3,12 +3,13 @@
 const drawPieText=(ctx,rx,ry,rmx,rmy,radius,data,total)=>{
     ctx.fillStyle = 'rgba(0,0,0,1)';
     ctx.font='20px Arial'
-    let percent = (data/total).toFixed(2);
-    let remain  = ((total-data)/total).toFixed(2);
-    percent = percent.slice(2,4);
-    remain =remain.slice(2,4);
+    // calculate the percentage.
+    let percent = parseFloat((data/total))
+    // into %
+    percent = Number(percent*100).toFixed(2);
     let result = percent+'%';
-    let rmResult = remain+'%';
+    let rmResult = (100-percent).toFixed(2)+'%';
+    console.log(result)
     ctx.fillText(result,rx,ry)
     ctx.fillText(rmResult,rmx,rmy)
 

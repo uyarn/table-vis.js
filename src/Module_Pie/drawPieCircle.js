@@ -1,6 +1,7 @@
 'use strict';
 import drawPieText from './drawPieText';
 const drawPieCircle=(ctx,data,width,height,scale,total,pie_style,focI)=>{
+
     // set the radius;
     let arc = {
       x:width*0.5,
@@ -37,8 +38,8 @@ const drawPieCircle=(ctx,data,width,height,scale,total,pie_style,focI)=>{
       x:arc.x+arc.radius*Math.cos(rmA),
       y:arc.y+arc.radius*Math.sin(rmA)
     }
-    rmL.x=rmL.x<arc.x?rmL.x-30:rmL.x+30;
-    rmL.y=rmL.y<arc.y?rmL.y-30:rmL.y+30;
+    rmL.x=rmL.x<arc.x?rmL.x-60:rmL.x+30;
+    rmL.y=rmL.y<arc.y?rmL.y-60:rmL.y+30;
     ctx.strokeStyle=pie_style[1];
     ctx.fillStyle=pie_style[1];
     ctx.closePath();
