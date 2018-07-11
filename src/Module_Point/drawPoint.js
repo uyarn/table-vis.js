@@ -7,7 +7,7 @@ import drawLineBase from 'drawLineBase';
 import drawMarkBase from 'drawMarkBase';
 import drawPointCol from './drawPointCol';
 
-const drawPoint=(data,focI,dire,title)=>{
+const drawPoint=(data,focI,dire,title,titleIdx)=>{
     data = data.map((item)=>{
         return parseFloat(item, 10);});
     let width=document.body.clientWidth*0.6;
@@ -30,7 +30,7 @@ const drawPoint=(data,focI,dire,title)=>{
     drawMarkBase(canvas.node(),maxData,data.length,width,height-20,scale,dire);
     // set bar Style
     let pStyle = pointStyle(ctx);
-    drawPointCol(ctx,data,width,height-20,scale,pStyle,focI,title);
+    drawPointCol(ctx,data,width,height-20,scale,pStyle,focI,title,titleIdx);
     ctx.scale(2,2);
 
     return ;

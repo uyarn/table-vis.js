@@ -1,18 +1,20 @@
 'use strict';
 
-const drawBarRect=(ctx,data,width,height,scale,rectStyle,focI,title)=>{
+const drawBarRect=(ctx,data,width,height,scale,rectStyle,focI,title,titleIdx)=>{
   let columnWidth = (width/data.length)*0.8;
   let scaleX =(width/data.length)*0.98;
   ctx.font='14px Arial';
+  console.log(focI)
   data.forEach(function(d,i) {
     // set the position of each Rectangle
     ctx.beginPath();
     ctx.rect(scaleX*i+10,height-20,columnWidth,-scale(d));
     // highlight the speical one
-    if(i==focI){
+    if((i==focI && titleIdx == undefined)||(titleIdx!= undefined && titleIdx[i].includes(focI))){
         ctx.fillStyle=rectStyle[0];
         ctx.strokeStyle = rectStyle[0];
-      }
+    }
+
     else{
         ctx.fillStyle= rectStyle[1];
         ctx.strokeStyle = rectStyle[1];

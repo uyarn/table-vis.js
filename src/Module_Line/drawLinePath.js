@@ -1,6 +1,6 @@
 'use strict';
 
-const drawLinePath=(ctx,data,width,height,scale,lineStyle,focI,title)=>{
+const drawLinePath=(ctx,data,width,height,scale,lineStyle,focI,title,titleIdx)=>{
 
   let eachLen=width/data.length*0.98
   ctx.font='14px Arial'
@@ -15,7 +15,7 @@ const drawLinePath=(ctx,data,width,height,scale,lineStyle,focI,title)=>{
     ctx.closePath();
     ctx.stroke();
     ctx.beginPath();
-    if(i==focI){
+    if((i==focI && titleIdx == undefined)||(titleIdx!= undefined && titleIdx[i].includes(focI))){
           // ctx.arc(eachLen*i+20,height-15-scale(d),20,0,2*Math.PI);
           ctx.font='22px Arial'
           ctx.fillStyle= lineStyle[0];

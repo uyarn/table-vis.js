@@ -11,11 +11,14 @@ const colData = function(ele,title){
     colList.push(tbody[i].children[index])
   };
   let reg =regData([colList,title])
-  return {
+  let data ={
      data:reg.data,
      title:reg.title,
-     index:Array.prototype.indexOf.call(tbody,row)
-     };
+     index: Array.prototype.indexOf.call(colList,ele)
+   };
+  if('titleIdx' in reg)
+     Object.assign(data,{titleIdx:reg.titleIdx})
+  return data;
 }
 
 export default colData;

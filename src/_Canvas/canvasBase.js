@@ -4,7 +4,7 @@ import * as d3a from 'd3-array';
 import * as d3s from 'd3-selection';
 import * as d3sc from 'd3-scale';
 
-const canvasBase={
+const canvasBase = {
    setCanvas:function(width,height,dire){
      let canvas = d3s.select('.tabular_container')
      .append("canvas")

@@ -28,27 +28,32 @@ const initBtn = (target,tcf,table_vis) => {
   document.body.appendChild(btnContainer);
   // row button event
 
-  rowBtn.addEventListener('click',()=>{
-    btnContainer.style.display='none';
-    let row = rowData(target.ele,target.rowTitle);
-    let headInx = colData(target.ele,target.colTitle).index;
-
+  rowBtn.addEventListener('click',
+    ()=>{
+      btnContainer.style.display='none';
+      let row = rowData(target.ele,target.rowTitle);
+      let headInx = colData(target.ele,target.colTitle).index;
     Object.assign(table_vis.data,{
        data:row.data,
        title:row.title,
        index:row.index,
        head:target.colTitle[headInx].innerHTML,
        status:'row'});
+    if('titleIdx' in row)
+        Object.assign(table_vis.data,{titleIdx:row.titleIdx});
     // init head of table_vis
     tcf.insertBefore(initHead(tcf,table_vis.data.head),tcf.querySelector('.tabular_container'));
+
     swapTabularVis(click,tcf);
-    bar(row.data,row.index,'row',row.title);
-  })
+
+    bar(row.data,row.index,'row',row.title,row.titleIdx);
+    })
   // column button event
-  columnBtn.addEventListener('click',()=>{
-    btnContainer.style.display='none'
-    let col = colData(target.ele,target.colTitle)
-    let headInx = rowData(target.ele,target.rowTitle).index;
+  columnBtn.addEventListener('click',
+    ()=>{
+     btnContainer.style.display='none'
+     let col = colData(target.ele,target.colTitle)
+     let headInx = rowData(target.ele,target.rowTitle).index;
 
     Object.assign(table_vis.data,{
        data:col.data,
@@ -56,12 +61,15 @@ const initBtn = (target,tcf,table_vis) => {
        index:col.index,
        head:target.rowTitle[headInx].innerHTML,
        status:'col'});
-
+    if('titleIdx' in col)
+       Object.assign(table_vis.data,{titleIdx:col.titleIdx});
     // init head of table_vis
     tcf.insertBefore(initHead(tcf,table_vis.data.head),tcf.querySelector('.tabular_container'));
+
     swapTabularVis(click,tcf);
-    bar(col.data,col.index,'col',col.title)
-  })
+
+    bar(col.data,col.index,'col',col.title,col.titleIdx)
+    })
   return btnContainer;
 }
 

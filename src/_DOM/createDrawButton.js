@@ -18,9 +18,9 @@ const createDrawButton=(table_vis)=>{
   barBtn.appendChild(icon[0]);
   barBtn.addEventListener('click',()=>{
 
-    let dArr = [d.data,d.index,d.status,d.title];
+    let dArr = [d.data,d.index,d.status,d.title,d.titleIdx];
     bar(...dArr)
-    
+
   });
   buttonContainer.appendChild(barBtn);
 
@@ -28,7 +28,7 @@ const createDrawButton=(table_vis)=>{
   let pieBtn = document.createElement('button');
   pieBtn.appendChild(icon[1])
   pieBtn.addEventListener('click',()=>{
-    let dArr = [d.data,d.index,d.title];
+    let dArr = [d.data,d.index,d.title,d.titleIdx];
     pie(...dArr)
   });
   buttonContainer.appendChild(pieBtn)
@@ -37,7 +37,7 @@ const createDrawButton=(table_vis)=>{
   let lineBtn = document.createElement('button');
   lineBtn.appendChild(icon[2])
   lineBtn.addEventListener('click',function(){
-    let dArr = [d.data,d.index,d.status,d.title];
+    let dArr = [d.data,d.index,d.status,d.title,d.titleIdx];
     line(...dArr);
   });
   buttonContainer.appendChild(lineBtn)
@@ -54,7 +54,7 @@ const createDrawButton=(table_vis)=>{
   let pointBtn = document.createElement('button');
   pointBtn.innerHTML = 'point'
   pointBtn.addEventListener('click',()=>{
-    let dArr = [d.data,d.index,d.status,d.title];
+    let dArr = [d.data,d.index,d.status,d.title,d.titleIdx];
     point(...dArr)
   });
   buttonContainer.appendChild(pointBtn)

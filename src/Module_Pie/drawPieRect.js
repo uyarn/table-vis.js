@@ -2,7 +2,7 @@
 
 const drawPieRect =(ctx,title,w)=>{
      let width = w*0.1;
-     let except = 'except'.concat(title)
+     let except = 'except '.concat(title)
      ctx.beginPath();
      ctx.fillStyle='rgba(110,200,245,1)'
      ctx.rect(width,width,width*0.5,width*0.3)

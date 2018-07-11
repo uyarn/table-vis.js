@@ -1,6 +1,6 @@
 'use strict';
 
-const drawPointCol=(ctx,data,width,height,scale,rectStyle,focI,title)=>{
+const drawPointCol=(ctx,data,width,height,scale,rectStyle,focI,title,titleIdx)=>{
   let columnWidth = (width/data.length)*0.05;
   let scaleX =(width/data.length)*0.9;
   data.forEach(function(d,i) {
@@ -8,9 +8,9 @@ const drawPointCol=(ctx,data,width,height,scale,rectStyle,focI,title)=>{
     ctx.beginPath();
     ctx.arc(scaleX*(i+1)+columnWidth/2,height-scale(d),columnWidth*4,0,2*Math.PI)
     ctx.rect(scaleX*(i+1),height,columnWidth,-scale(d)+columnWidth*4);
-
+    console.log(titleIdx)
     // highlight the speical one
-    if(i==focI){
+    if((i==focI && titleIdx == undefined)||(titleIdx!= undefined && titleIdx[i].includes(focI))){
         ctx.fillStyle=rectStyle[0];
         ctx.strokeStyle = rectStyle[0];
       }
