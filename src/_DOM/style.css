@@ -11,6 +11,7 @@
   25% { opacity:0.3; }
   50% { opacity:0.5;}
   100% {opacity:1; }}
+
 .tabular_container_fluid{
   display:inline-block;
   position:fixed;

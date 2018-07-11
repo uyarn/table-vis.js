@@ -16,7 +16,6 @@ const cateData =(rawData,data,title)=>{
           titleIdx.push([i]);
       }
    }
-   console.log(titleIdx)
    return { data:data, title:title ,titleIdx:titleIdx};
 }
 
