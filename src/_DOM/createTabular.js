@@ -17,7 +17,10 @@ const createTabular=(table_vis)=>{
     tabularContainerFluid.style.width = "0";
     tabularContainerFluid.removeChild(tabularContainerFluid.querySelector('h3'))
     tabularContainer.removeChild(tabularContainer.firstElementChild);
-
+    let highlight = document.querySelectorAll('.tabular_highlight');
+    highlight.forEach(function(d){
+      className.removeClass(d,'tabular_highlight')
+    })
   })
   // create button components
   tabularContainerFluid.appendChild(createDrawButton(table_vis));

@@ -6,7 +6,7 @@ const initHead =(tcf,headCtx)=>{
    // create the <h3> element.
    if(tcf.querySelector('h3')){
       tcf.querySelector('h3').innerHTML=headCtx;
-      return ;
+      return tcf.querySelector('h3');
     }
 
    else{

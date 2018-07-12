@@ -14,7 +14,6 @@ const drawPie=(data,focI,title,titleIdx)=>{
     let total=0;
     data = data.map((item)=>{
          if(!isNaN(parseFloat(item, 10))){
-           console.log(parseFloat(item, 10))
            total = total + parseFloat(item, 10);
            return parseFloat(item, 10)
          }

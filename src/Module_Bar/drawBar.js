@@ -35,5 +35,4 @@ const drawBar=(data,focI,dire,title,titleIdx)=>{
     return ;
 }
 
-
 export default drawBar;

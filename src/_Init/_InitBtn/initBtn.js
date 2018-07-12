@@ -30,9 +30,13 @@ const initBtn = (target,tcf,table_vis) => {
 
   rowBtn.addEventListener('click',
     ()=>{
+      document.querySelectorAll('.tabular_highlight').forEach(function(d){
+        className.removeClass(d,'tabular_highlight');
+      })
       btnContainer.style.display='none';
-      let row = rowData(target.ele,target.rowTitle);
-      let headInx = colData(target.ele,target.colTitle).index;
+      let row = rowData(target.ele,target.rowTitle,1);
+      let headInx = colData(target.ele,target.colTitle,0).index;
+
     Object.assign(table_vis.data,{
        data:row.data,
        title:row.title,
@@ -41,6 +45,11 @@ const initBtn = (target,tcf,table_vis) => {
        status:'row'});
     if('titleIdx' in row)
         Object.assign(table_vis.data,{titleIdx:row.titleIdx});
+    else
+       {
+         if('titleIdx' in table_vis.data)
+            delete table_vis.data.titleIdx
+       }
     // init head of table_vis
     tcf.insertBefore(initHead(tcf,table_vis.data.head),tcf.querySelector('.tabular_container'));
 
@@ -51,9 +60,12 @@ const initBtn = (target,tcf,table_vis) => {
   // column button event
   columnBtn.addEventListener('click',
     ()=>{
+      document.querySelectorAll('.tabular_highlight').forEach(function(d){
+        className.removeClass(d,'tabular_highlight');
+      })
      btnContainer.style.display='none'
-     let col = colData(target.ele,target.colTitle)
-     let headInx = rowData(target.ele,target.rowTitle).index;
+     let col = colData(target.ele,target.colTitle,1)
+     let headInx = rowData(target.ele,target.rowTitle,0).index;
 
     Object.assign(table_vis.data,{
        data:col.data,
@@ -63,6 +75,11 @@ const initBtn = (target,tcf,table_vis) => {
        status:'col'});
     if('titleIdx' in col)
        Object.assign(table_vis.data,{titleIdx:col.titleIdx});
+       else
+          {
+            if('titleIdx' in table_vis.data)
+               delete table_vis.data.titleIdx
+          }
     // init head of table_vis
     tcf.insertBefore(initHead(tcf,table_vis.data.head),tcf.querySelector('.tabular_container'));
 

@@ -15,7 +15,7 @@ const className={
       // remove the class name
       let removedName = originClassName.replace(" "+name+" ", " ");
       // remove the useless space
-      removedSpace = removedName.replace(/(^\s+)|(\s+$)/g, "");
+      let removedSpace = removedName.replace(/(^\s+)|(\s+$)/g, "");
       ele.className = removedSpace;
   }
 }
