@@ -1,6 +1,6 @@
 {
   "name": "table_vis",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "a Javascript Library for visualising the tabular data selected and adapting the information overload.",
   "main": "./dist/table_vis.js",
   "scripts": {
