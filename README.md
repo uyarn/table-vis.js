@@ -34,4 +34,4 @@
       table_vis.vis(document.getElementsByTagName('table')[0]);
       ```
   * **Example**
-     * [row demo page](https://github.com/YarnChen/table_vis/edit/master/demo/demo.html)
+     * [Demo Page](https://github.com/YarnChen/table_vis/demo/demo.html)
