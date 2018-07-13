@@ -5,7 +5,6 @@ const calcPlot=function(data){
   // sort data;
   let calc = data;
   calc =quickSort(calc);
-  console.log(calc)
   let len = data.length;
   // calc Q3,Q1
   let mid,q3Idx,q1Idx;
@@ -23,18 +22,23 @@ const calcPlot=function(data){
   // calculate Q3
   q3Idx = q1Idx*3;
   let q3Int = parseInt(q3Idx)
-  let q3L =parseInt(q3Idx)+1 - q3Idx;
+  let q3L = parseInt(q3Idx)+1 - q3Idx;
   let q3 = q3L*calc[q3Int-1] + (1-q3L)*calc[q3Int]
-  // let Iqr = q3 - q1;
+  let Iqr = q3 - q1;
+  let min = q1-1.5*Iqr
+  let max = q3+1.5*Iqr
+  if(calc[0]>min)
+      min = calc[0]
+  if(calc[calc.length-1]<max)
+      max = calc[calc.length-1]
   let boxPlotData=
   {
-    min: calc[0],
-    max: calc[calc.length-1],
+    min: min,
+    max: max,
     middle:mid,
     q3: q3,
     q1: q1
   }
-  console.log(boxPlotData)
   return boxPlotData
 }
 /*!

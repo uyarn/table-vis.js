@@ -17,7 +17,7 @@ const regData=(cell,idx)=>{
   }
   if(reg.test(pre))
   {
-    return numericalData(cell,reg,data,title)
+    return numericalData(cell,data,title)
   }
   else
   {

@@ -1,5 +1,3 @@
-/*@keyframes tabular{ from{ width:0px} to { width:35%} }*/
-/*@-webkit-keyframes tabular{ from{ width:0} to { width:35%} }*/
 
 @keyframes canvaKey{
   0% { opacity:0; }
@@ -52,7 +50,7 @@
   text-align: center;
 }
 .tabular_highlight{
-  animation: td_highlight 2s  infinite reverse;
-  -webkit-animation: td_highlight 2s  infinite reverse;
+  animation: td_highlight 1s  infinite reverse;
+  -webkit-animation: td_highlight 1s  infinite reverse;
 
 }

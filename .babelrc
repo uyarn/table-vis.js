@@ -1,5 +1,11 @@
 {
   "presets": [
     "es2015"
+  ],
+  "plugins": [
+		[ "module-resolver", {
+			"alias": {
+        "className": "./src/_DOM/className" }
+		}]
   ]
 }

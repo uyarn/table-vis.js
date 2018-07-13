@@ -7,7 +7,7 @@ import drawMarkBase from 'drawMarkBase';
 
 import drawBox from './drawBox'
 
-const drawBoxPlot=(data,index,boxPlotData,dire,titleCell)=>{
+const drawBoxPlot = (data,index,boxPlotData,dire,titleCell) => {
     data = data.map((item)=>{
         return parseFloat(item, 10);});
     let width=document.body.clientWidth*0.6;
@@ -31,6 +31,5 @@ const drawBoxPlot=(data,index,boxPlotData,dire,titleCell)=>{
     ctx.scale(2,2);
     return ;
 }
-
 
 export default drawBoxPlot;
