@@ -2,35 +2,62 @@
 <html>
 <head>
 <meta charset='uft-8'/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   <style>
   html{
-    background: #000;
-  }
-  table{
-    margin: 0 auto;
-    text-align: center;
     background: #fff;
   }
+  p{
+    text-align: center;
+  }
+  #vis_table{
+    width: 80%;
+    margin-bottom: 50px;
+  }
+  table,th,td{
+    margin: 0 auto;
+    text-align: center;
+    background: #f7f7f7;
+  }
+  tbody td:first-child{
+    font-weight: bold;
+  }
+
   h1,h3{
     text-align: center;
+  }
+  h1{
+    margin-bottom: 50px;
   }
   #d2{
     position: absolute;
     top:700px;
   }
   table td{
-    border: 1px solid #000;
+    border: 1px solid #c3c3c3;
   }
 </style>
 </head>
 <body>
-<h1>Table_visualised Row Demo</h1>
+<h1>Table_vis.js Demo Page</h1>
+<h3>How to install and use</h3> c
+<p>1.<code>npm install table_vis --save</code>
+</p>
+<p>
+  2.<code>import table_vis from 'table_vis'</code>
+  or
+  <code>let table_vis = require('table_vis');</code>
+</p>
+<p>
+  3.<code>table_vis.vis(table)</code>
+</p>
 <h3>Players Score Table</h3>
-<table id = 'vis_table'>
+<table id = 'vis_table' class='table'>
 <thead>
 <tr>
-<th></th><th>Round1</th><th>Round2</th><th>Round3</th><th>Round4</th>
-    <th>Round5</th><th>Round6</th><th>1/16 Final</th><th>1/8 Final</th><th>1/4 Final</th><th>Semi Final</th><th>Country</th><th>Gender</th>
+<th>Name</th><th>Round1</th><th>Round2</th><th>Round3</th><th>Round4</th>
+    <th>Round5</th><th>Round6</th><th>1/8 Final</th><th>1/4 Final</th><th>Semi Final</th><th>Semi Final</th><th>Country</th><th>Gender</th>
 </tr>
 </thead>
 <tbody>
