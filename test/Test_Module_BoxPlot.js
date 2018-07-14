@@ -1,7 +1,12 @@
 var assert = require('assert');
 var path = require('path')
+
 import quickSort from '../src/Module_BoxPlot/quickSort';
 import calcPlot from '../src/Module_BoxPlot/calcPlot'
+import boxPlot from '../src/Module_BoxPlot/boxPlot';
+import drawBox from '../src/Module_BoxPlot/drawBox';
+import drawBoxPlot from '../src/Module_BoxPlot/drawBoxPlot';
+
 describe('Module Box Plot Testing', ()=> {
   // test array that has only one element
   describe('Quick Sort Test 1', ()=> {

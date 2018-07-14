@@ -7,7 +7,7 @@ const className={
       // if it has class name , make a blank, else make nothing
       let addClassName = originClassName +((originClassName=="")?"":" ")+name;
       ele.className = addClassName;
-      // callback(ele);
+      return ele
   },
   removeClass:function (ele,name){
       let originClassName =" "+ele.className+" ";
@@ -16,7 +16,8 @@ const className={
       let removedName = originClassName.replace(" "+name+" ", " ");
       // remove the useless space
       let removedSpace = removedName.replace(/(^\s+)|(\s+$)/g, "");
-      ele.className = removedSpace;
+      ele.className = removedSpace
+      return ele
   }
 }
 export default className;
