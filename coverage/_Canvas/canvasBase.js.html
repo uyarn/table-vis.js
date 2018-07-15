@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">30.77% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/13</span>
+        <span class='fraction'>13/13</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">30.77% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/13</span>
+        <span class='fraction'>13/13</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -90,30 +90,30 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -125,31 +125,31 @@ import * as d3s from 'd3-selection';
 import * as d3sc from 'd3-scale';
 &nbsp;
 const canvasBase = {
-   setCanvas:<span class="fstat-no" title="function not covered" >function(</span>width,height,dire){
-     let canvas = <span class="cstat-no" title="statement not covered" >d3s.select('.tabular_container')</span>
+   setCanvas:function(width,height,dire){
+     let canvas = d3s.select('.tabular_container')
      .append("canvas")
      .attr("width", width)
      .attr("height", height)
      .style("animation",'canvasKey 1s')
      .style("WebkitAnimation",'canvasKey 1s');
-<span class="cstat-no" title="statement not covered" >     if(dire == 'col')</span>
-<span class="cstat-no" title="statement not covered" >      d3s.select('.tabular_container').select('canvas').style('transform','rotate(90deg)');</span>
-<span class="cstat-no" title="statement not covered" >     return canvas;</span>
+     if(dire == 'col')
+      d3s.select('.tabular_container').select('canvas').style('transform','rotate(90deg)');
+     return canvas;
    },
-   setScale:<span class="fstat-no" title="function not covered" >function(</span>height,data){
-     let scale = <span class="cstat-no" title="statement not covered" >d3sc.scaleLinear()</span>
+   setScale:function(height,data){
+     let scale = d3sc.scaleLinear()
      .range([0, height-20])
      .domain([0,d3a.max(data)]);
-<span class="cstat-no" title="statement not covered" >     return scale;</span>
+     return scale;
    },
-   setPieScale:<span class="fstat-no" title="function not covered" >function(</span>total){
-     let scale = <span class="cstat-no" title="statement not covered" >d3sc.scaleLinear()</span>
+   setPieScale:function(total){
+     let scale = d3sc.scaleLinear()
      .range([0,2*Math.PI])
      .domain([0,total]);
-<span class="cstat-no" title="statement not covered" >     return scale;</span>
+     return scale;
    },
-   maxData:<span class="fstat-no" title="function not covered" >function(</span>data){
-<span class="cstat-no" title="statement not covered" >     return d3a.max(data);</span>
+   maxData:function(data){
+     return d3a.max(data);
    }
 }
 &nbsp;
@@ -160,7 +160,7 @@ export default canvasBase;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jul 14 2018 16:59:03 GMT+0100 (BST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jul 15 2018 02:15:20 GMT+0100 (BST)
 </div>
 </div>
 <script src="../prettify.js"></script>

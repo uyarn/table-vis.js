@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">28.57% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/14</span>
+        <span class='fraction'>14/14</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">28.57% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/14</span>
+        <span class='fraction'>14/14</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -82,23 +82,23 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -110,24 +110,24 @@ import numericalData from './numericalData';
 import cateData from './cateData';
 import className from 'className'
 &nbsp;
-const <span class="fstat-no" title="function not covered" >regData=(</span>cell,idx)=&gt;{
-  let data =<span class="cstat-no" title="statement not covered" >[];</span>
-  let title =<span class="cstat-no" title="statement not covered" >[];</span>
-  let reg = <span class="cstat-no" title="statement not covered" >new RegExp(/^\d+\.?\d*$/);</span>
-  let pre = <span class="cstat-no" title="statement not covered" >cell[0][0].innerHTML.replace(/\,/g,'')</span>
-<span class="cstat-no" title="statement not covered" >  if(idx){</span>
+const regData=(cell,idx)=&gt;{
+  let data =[];
+  let title =[];
+  let reg = new RegExp(/^\d+\.?\d*$/);
+  let pre = cell[0][0].innerHTML.replace(/\,/g,'')
+  if(idx){
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    cell[0].forEach(<span class="fstat-no" title="function not covered" >function(</span>d){</span>
-<span class="cstat-no" title="statement not covered" >      className.addClass(d,'tabular_highlight')</span>
+    cell[0].forEach(function(d){
+      className.addClass(d,'tabular_highlight')
     })
   }
-<span class="cstat-no" title="statement not covered" >  if(reg.test(pre))</span>
+  if(reg.test(pre))
   {
-<span class="cstat-no" title="statement not covered" >    return numericalData(cell,data,title)</span>
+    return numericalData(cell,data,title)
   }
   else
   {
-<span class="cstat-no" title="statement not covered" >    return cateData(cell[0],data,title)</span>
+    return cateData(cell[0],data,title)
   }
 &nbsp;
 }
@@ -139,7 +139,7 @@ export default regData;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jul 14 2018 16:59:03 GMT+0100 (BST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jul 15 2018 02:15:20 GMT+0100 (BST)
 </div>
 </div>
 <script src="../prettify.js"></script>

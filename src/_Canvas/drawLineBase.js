@@ -7,7 +7,7 @@ const drawBarLine=(ctx,orix,oriy,X,Y)=>{
   ctx.lineTo(X, Y);
   ctx.closePath();
   ctx.stroke();
-
+  return ctx;
 }
 
 export default drawBarLine;

@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">8.33% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/12</span>
+        <span class='fraction'>12/12</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">8.33% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/12</span>
+        <span class='fraction'>12/12</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -71,44 +71,44 @@
 <a name='L23'></a><a href='#L23'>23</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">40x</span>
+<span class="cline-any cline-yes">40x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict'
 &nbsp;
-const <span class="fstat-no" title="function not covered" >cateData =(</span>rawData,data,title)=&gt;{
-  let titleIdx=<span class="cstat-no" title="statement not covered" >[];</span>
-<span class="cstat-no" title="statement not covered" >  for(let i =0;i&lt;rawData.length;i++){</span>
+const cateData =(rawData,data,title)=&gt;{
+  let titleIdx=[];
+  for(let i =0;i&lt;rawData.length;i++){
       // 替换千分位中的逗号字符
-      let td = <span class="cstat-no" title="statement not covered" >rawData[i].innerHTML;</span>
-<span class="cstat-no" title="statement not covered" >      if(title.includes(td)){</span>
-        let idx = <span class="cstat-no" title="statement not covered" >title.indexOf(td);</span>
-<span class="cstat-no" title="statement not covered" >        titleIdx[idx].push(i);</span>
-<span class="cstat-no" title="statement not covered" >        data[idx]++;</span>
+      let td = rawData[i].innerHTML;
+      if(title.includes(td)){
+        let idx = title.indexOf(td);
+        titleIdx[idx].push(i);
+        data[idx]++;
       }
       else{
-<span class="cstat-no" title="statement not covered" >          data.push(1);</span>
-<span class="cstat-no" title="statement not covered" >          title.push(td)</span>
-<span class="cstat-no" title="statement not covered" >          titleIdx.push([i]);</span>
+          data.push(1);
+          title.push(td)
+          titleIdx.push([i]);
       }
    }
-<span class="cstat-no" title="statement not covered" >   return { data:data, title:title ,titleIdx:titleIdx};</span>
+   return { data:data, title:title ,titleIdx:titleIdx};
 }
 &nbsp;
 export default cateData;
@@ -118,7 +118,7 @@ export default cateData;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jul 14 2018 16:59:03 GMT+0100 (BST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jul 15 2018 02:15:20 GMT+0100 (BST)
 </div>
 </div>
 <script src="../prettify.js"></script>

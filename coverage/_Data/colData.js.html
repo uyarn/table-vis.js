@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">15.38% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>2/13</span>
+        <span class='fraction'>13/13</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">15.38% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>2/13</span>
+        <span class='fraction'>13/13</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -75,22 +75,22 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -98,23 +98,23 @@
 &nbsp;
 import regData from './regData'
 &nbsp;
-const <span class="fstat-no" title="function not covered" >colData = f</span>unction(ele,title,idx){
-  let row = <span class="cstat-no" title="statement not covered" >ele.parentNode;</span>
-  let tbody = <span class="cstat-no" title="statement not covered" >row.parentNode.children;</span>
-  let colList=<span class="cstat-no" title="statement not covered" >[]</span>
-  let index = <span class="cstat-no" title="statement not covered" >Array.prototype.indexOf.call(row.children,ele)</span>
-<span class="cstat-no" title="statement not covered" >  for (let i =0; i&lt;tbody.length;i++)</span>
-<span class="cstat-no" title="statement not covered" >    colList.push(tbody[i].children[index])</span>
+const colData = function(ele,title,idx){
+  let row = ele.parentNode;
+  let tbody = row.parentNode.children;
+  let colList=[]
+  let index = Array.prototype.indexOf.call(row.children,ele)
+  for (let i =0; i&lt;tbody.length;i++)
+    colList.push(tbody[i].children[index])
 &nbsp;
-  let reg =<span class="cstat-no" title="statement not covered" >regData([colList,title],idx)</span>
-  let data =<span class="cstat-no" title="statement not covered" >{</span>
+  let reg =regData([colList,title],idx)
+  let data ={
      data:reg.data,
      title:reg.title,
      index: Array.prototype.indexOf.call(colList,ele)
    };
-<span class="cstat-no" title="statement not covered" >  if('titleIdx' in reg)</span>
-<span class="cstat-no" title="statement not covered" >     Object.assign(data,{titleIdx:reg.titleIdx})</span>
-<span class="cstat-no" title="statement not covered" >  return data;</span>
+  <span class="missing-if-branch" title="else path not taken" >E</span>if('titleIdx' in reg)
+     Object.assign(data,{titleIdx:reg.titleIdx})
+  return data;
 }
 &nbsp;
 export default colData;
@@ -124,7 +124,7 @@ export default colData;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jul 14 2018 16:59:03 GMT+0100 (BST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jul 15 2018 02:15:20 GMT+0100 (BST)
 </div>
 </div>
 <script src="../prettify.js"></script>

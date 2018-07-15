@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">4.55% </span>
+        <span class="strong">95.45% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/22</span>
+        <span class='fraction'>21/22</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">83.33% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>5/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">4.55% </span>
+        <span class="strong">95.45% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/22</span>
+        <span class='fraction'>21/22</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -89,37 +89,37 @@
 <a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -128,38 +128,38 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
 &nbsp;
-const <span class="fstat-no" title="function not covered" >swapTabularVis=(</span>click,ctF)=&gt;{
-      let cavDiv = <span class="cstat-no" title="statement not covered" >ctF.querySelector('.tabular_container')</span>
+const swapTabularVis=(click,ctF)=&gt;{
+      let cavDiv = ctF.querySelector('.tabular_container')
       // remove canvas everytime
-<span class="cstat-no" title="statement not covered" >      if(!click){</span>
-<span class="cstat-no" title="statement not covered" >        if(cavDiv.firstElementChild){</span>
+      if(!click){
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(cavDiv.firstElementChild){
 <span class="cstat-no" title="statement not covered" >          cavDiv.removeChild(cavDiv.firstElementChild)</span>
         }
-<span class="cstat-no" title="statement not covered" >        ctF.style.width=(document.body.clientWidth*0.35)+'px';</span>
-<span class="cstat-no" title="statement not covered" >        ctF.style.height=(document.body.clientWidth*0.4)+'px';</span>
+        ctF.style.width=(document.body.clientWidth*0.35)+'px';
+        ctF.style.height=(document.body.clientWidth*0.4)+'px';
         // to standard browser
-<span class="cstat-no" title="statement not covered" >        ctF.style.animation = 'tabular 1s';</span>
+        ctF.style.animation = 'tabular 1s';
         // to Chrome and Safari;
-<span class="cstat-no" title="statement not covered" >        ctF.style.WebkitAnimation= 'tabular 1s';</span>
-<span class="cstat-no" title="statement not covered" >        ctF.style.cursor = 'pointer';</span>
-<span class="cstat-no" title="statement not covered" >        return true;</span>
+        ctF.style.WebkitAnimation= 'tabular 1s';
+        ctF.style.cursor = 'pointer';
+        return true;
       }
       else{
-<span class="cstat-no" title="statement not covered" >        if(ctF.style.width!="0px"){</span>
-<span class="cstat-no" title="statement not covered" >          ctF.removeAttribute('style');</span>
-<span class="cstat-no" title="statement not covered" >          ctF.style.width = "0";</span>
-<span class="cstat-no" title="statement not covered" >          ctF.removeChild(ctF.firstElementChild);</span>
-<span class="cstat-no" title="statement not covered" >          return false;</span>
+        if(ctF.style.width!="0px"){
+          ctF.removeAttribute('style');
+          ctF.style.width = "0";
+          ctF.removeChild(ctF.firstElementChild);
+          return false;
         }
         else {
-<span class="cstat-no" title="statement not covered" >          ctF.style.width=(document.body.clientWidth*0.35)+'px';</span>
-<span class="cstat-no" title="statement not covered" >          ctF.style.height=(document.body.clientWidth*0.4)+'px';</span>
+          ctF.style.width=(document.body.clientWidth*0.35)+'px';
+          ctF.style.height=(document.body.clientWidth*0.4)+'px';
           // to standard browser
-<span class="cstat-no" title="statement not covered" >          ctF.style.animation = 'tabular 1s';</span>
+          ctF.style.animation = 'tabular 1s';
           // to Chrome and Safari;
-<span class="cstat-no" title="statement not covered" >          ctF.style.WebkitAnimation= 'tabular 1s';</span>
-<span class="cstat-no" title="statement not covered" >          ctF.style.cursor = 'pointer';</span>
-<span class="cstat-no" title="statement not covered" >          return true;</span>
+          ctF.style.WebkitAnimation= 'tabular 1s';
+          ctF.style.cursor = 'pointer';
+          return true;
         }
       }
 &nbsp;
@@ -172,7 +172,7 @@ export default swapTabularVis;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jul 14 2018 16:59:03 GMT+0100 (BST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jul 15 2018 02:15:20 GMT+0100 (BST)
 </div>
 </div>
 <script src="../prettify.js"></script>

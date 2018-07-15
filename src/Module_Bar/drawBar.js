@@ -14,8 +14,8 @@ const drawBar=(data,focI,dire,title,titleIdx)=>{
     let height = width;
     // initial the canvas
     let cavCon=document.querySelector('.tabular_container')
-    if(cavCon.firstElementChild)
-      cavCon.removeChild(cavCon.firstElementChild)
+      if(cavCon.firstElementChild)
+        cavCon.removeChild(cavCon.firstElementChild)
     let canvas = canvasBase.setCanvas(width,height,dire);
     let ctx = canvas.node().getContext('2d');
     let scale = canvasBase.setScale(height-30,data);
@@ -32,7 +32,7 @@ const drawBar=(data,focI,dire,title,titleIdx)=>{
     drawBarRect(ctx,data,width,height,scale,rectStyle,focI,title,titleIdx);
     ctx.scale(2,2);
 
-    return ;
+    return cavCon;
 }
 
 export default drawBar;
