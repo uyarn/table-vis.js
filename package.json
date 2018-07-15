@@ -7,7 +7,7 @@
     "start": "serve demo",
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "test": "nyc --reporter=text --reporter=html mocha --require babel-register"
+    "test": "nyc --reporter=text mocha --require babel-register"
   },
   "repository": {
     "type": "git",

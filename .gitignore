@@ -6,7 +6,7 @@ package-lock.json
 
 #testing output
 .nyc_output
-coverage/**/**.html
+./coverage/**
 
 # Dependency directory
 node_modules
