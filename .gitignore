@@ -1,0 +1,16 @@
+
+#log
+npm-debug.log
+package-lock.json
+
+
+#testing output
+.nyc_output
+coverage/**/**.html
+
+# Dependency directory
+node_modules
+#Mac OS Files
+.DS_Store
+
+#temporary
