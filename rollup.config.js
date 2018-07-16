@@ -9,7 +9,7 @@ const aliasList =
 		reslove:['.js'],
 		className: path.join(__dirname,'src/_DOM/className'),
 		colData: path.join(__dirname,'src/_Data/colData'),
-		swapTabularVis:path.join(__dirname,'src/_DOM/swapTabularVis'),
+		swapTableVis:path.join(__dirname,'src/_DOM/swapTableVis'),
 		rowData: path.join(__dirname,'src/_Data/rowData'),
 		indexData: path.join(__dirname,'src/_Data/indexData'),
 		bar:path.join(__dirname,'src/Module_Bar/bar'),

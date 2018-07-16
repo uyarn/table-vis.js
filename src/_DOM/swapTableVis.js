@@ -1,17 +1,16 @@
 'use strict';
 
-const swapTabularVis=(click,ctF)=>{
+const swapTableVis=(click,ctF)=>{
       let cavDiv = ctF.querySelector('.tabular_container')
       // remove canvas everytime
       if(!click){
         if(cavDiv.firstElementChild){
           cavDiv.removeChild(cavDiv.firstElementChild)
         }
-        ctF.style.width=(document.body.clientWidth*0.35)+'px';
-        ctF.style.height=(document.body.clientWidth*0.4)+'px';
-        // to standard browser
+        ctF.style.width='400px';
+        ctF.style.height='500px';
         ctF.style.animation = 'tabular 1s';
-        // to Chrome and Safari;
+        // compatible to Chrome and Safari;
         ctF.style.WebkitAnimation= 'tabular 1s';
         ctF.style.cursor = 'pointer';
         return true;
@@ -24,9 +23,8 @@ const swapTabularVis=(click,ctF)=>{
           return false;
         }
         else {
-          ctF.style.width=(document.body.clientWidth*0.35)+'px';
-          ctF.style.height=(document.body.clientWidth*0.4)+'px';
-          // to standard browser
+          ctF.style.width='400px';
+          ctF.style.height='500px';
           ctF.style.animation = 'tabular 1s';
           // to Chrome and Safari;
           ctF.style.WebkitAnimation= 'tabular 1s';
@@ -37,4 +35,4 @@ const swapTabularVis=(click,ctF)=>{
 
 }
 
-export default swapTabularVis;
+export default swapTableVis;

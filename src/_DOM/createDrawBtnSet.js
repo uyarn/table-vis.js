@@ -7,9 +7,9 @@ import boxplot from 'boxplot';
 import point from 'point';
 import createIcon from './createIcon'
 
-const createDrawButton=(table_vis)=>{
+const createDrawBtnSets = (target) => {
   // create the container div;
-  let d = table_vis.data;
+  let d = target.data;
   let buttonContainer = document.createElement('div');
   buttonContainer.setAttribute('id','tabular_vis_btn');
   let icon = createIcon();
@@ -60,4 +60,4 @@ const createDrawButton=(table_vis)=>{
   buttonContainer.appendChild(pointBtn)
   return buttonContainer;
 }
-export default createDrawButton;
+export default createDrawBtnSets;

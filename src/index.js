@@ -1,14 +1,11 @@
 'use strict';
 // index file
-import initTable from './_Init/initTable';
-
-let vis_table={}
+import initTableVis from './_Init/initTableVis';
 
 const table_vis={
     initial:false,
-    data:{},
     //init the tBody
-    vis:initTable
+    vis:initTableVis
 }
 
 /*!

@@ -9,6 +9,7 @@
   25% { opacity:0.3; }
   50% { opacity:0.5;}
   100% {opacity:1; }}
+/*highlight the data cells*/
 @keyframes  td_highlight {
    from { background: #fff;}
    to { background: rgba(110,200,245,1)}
@@ -50,7 +51,7 @@
   text-align: center;
 }
 .tabular_highlight{
-  animation: td_highlight 1s  infinite reverse;
-  -webkit-animation: td_highlight 1s  infinite reverse;
+  animation: td_highlight 1s infinite reverse;
+  -webkit-animation: td_highlight 1s infinite reverse;
 
 }

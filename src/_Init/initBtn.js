@@ -1,13 +1,13 @@
 'use strict';
 
 import className from 'className';
-import swapTabularVis from 'swapTabularVis'
+import swapTableVis from 'swapTableVis'
 import colData from 'colData'
 import rowData from 'rowData'
 import bar from 'bar'
-import initHead from '../initHead'
+import initHead from './initHead'
 
-const initBtn = (target,tcf,table_vis) => {
+const initBtn = (target,tcf) => {
   // tcf = tcf
   let btnContainer = document.createElement('div');
   let btnBox = document.createElement('div');
@@ -37,23 +37,23 @@ const initBtn = (target,tcf,table_vis) => {
       let row = rowData(target.ele,target.rowTitle,1);
       let headInx = colData(target.ele,target.colTitle,0).index;
 
-    Object.assign(table_vis.data,{
+    Object.assign(target.data,{
        data:row.data,
        title:row.title,
        index:row.index,
        head:target.colTitle[headInx].innerHTML,
        status:'row'});
     if('titleIdx' in row)
-        Object.assign(table_vis.data,{titleIdx:row.titleIdx});
+        Object.assign(target.data,{titleIdx:row.titleIdx});
     else
        {
-         if('titleIdx' in table_vis.data)
-            delete table_vis.data.titleIdx
+         if('titleIdx' in target.data)
+            delete target.data.titleIdx
        }
-    // init head of table_vis
-    tcf.insertBefore(initHead(tcf,table_vis.data.head),tcf.querySelector('.tabular_container'));
+    // init head of target
+    tcf.insertBefore(initHead(tcf,target.data.head),tcf.querySelector('.tabular_container'));
 
-    swapTabularVis(click,tcf);
+    swapTableVis(click,tcf);
 
     bar(row.data,row.index,'row',row.title,row.titleIdx);
     })
@@ -67,23 +67,23 @@ const initBtn = (target,tcf,table_vis) => {
      let col = colData(target.ele,target.colTitle,1)
      let headInx = rowData(target.ele,target.rowTitle,0).index;
 
-    Object.assign(table_vis.data,{
+    Object.assign(target.data,{
        data:col.data,
        title:col.title,
        index:col.index,
        head:target.rowTitle[headInx].innerHTML,
        status:'col'});
     if('titleIdx' in col)
-       Object.assign(table_vis.data,{titleIdx:col.titleIdx});
+       Object.assign(target.data,{titleIdx:col.titleIdx});
        else
           {
-            if('titleIdx' in table_vis.data)
-               delete table_vis.data.titleIdx
+            if('titleIdx' in target.data)
+               delete target.data.titleIdx
           }
-    // init head of table_vis
-    tcf.insertBefore(initHead(tcf,table_vis.data.head),tcf.querySelector('.tabular_container'));
+    // init head of target
+    tcf.insertBefore(initHead(tcf,target.data.head),tcf.querySelector('.tabular_container'));
 
-    swapTabularVis(click,tcf);
+    swapTableVis(click,tcf);
 
     bar(col.data,col.index,'col',col.title,col.titleIdx)
     })

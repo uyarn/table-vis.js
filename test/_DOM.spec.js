@@ -3,10 +3,10 @@ var jsdom = require('mocha-jsdom');
 var expect = require('chai').expect
 
 import className from 'className';
-import SwapTabularVis from '../src/_DOM/SwapTabularVis';
+import SwapTableVis from '../src/_DOM/SwapTableVis';
 import createIcon from '../src/_DOM/createIcon';
-// import createTabular from '../src/_DOM/createTabular';
-// import createDrawButton from '../src/_DOM/createDrawButton';
+// import createTable from '../src/_DOM/createTabular';
+// import createDrawBtnSets from '../src/_DOM/createDrawButton';
 
 
 describe('_DOM Module Tests', ()=>{
@@ -42,16 +42,16 @@ describe('_DOM Module Tests', ()=>{
          tab_con = document.createElement('div');
          tab_con.setAttribute('class','tabular_container');
          ctf.appendChild(tab_con);
-         expect(SwapTabularVis(false,ctf)).eql(true);
+         expect(SwapTableVis(false,ctf)).eql(true);
        })
        // branch 2 , should return false
        it('should return false',()=>{
          ctf.style.width='300px'
-         expect(SwapTabularVis(true,ctf)).eql(false);
+         expect(SwapTableVis(true,ctf)).eql(false);
        })
        // branch 3 , should return true
        it('should return false',()=>{
-         expect(SwapTabularVis(true,ctf)).eql(true);
+         expect(SwapTableVis(true,ctf)).eql(true);
        })
      })
 
