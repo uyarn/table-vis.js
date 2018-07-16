@@ -41,7 +41,7 @@ const initTableVis = function(table){
             // 单元格事件委托, 只绑定在tbody上。
             //event delegation ,td -> tbody
             tBody.addEventListener('click',
-            ()=>{
+            (event)=>{
               let e = event || window.event;
               // let target =e.target;
               let left = e.clientX;

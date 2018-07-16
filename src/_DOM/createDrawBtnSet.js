@@ -13,6 +13,7 @@ const createDrawBtnSets = (target) => {
   let buttonContainer = document.createElement('div');
   buttonContainer.setAttribute('id','tabular_vis_btn');
   let icon = createIcon();
+  console.log(icon)
   // bar button
   let barBtn = document.createElement('button');
   barBtn.appendChild(icon[0]);

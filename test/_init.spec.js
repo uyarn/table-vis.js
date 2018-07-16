@@ -3,8 +3,8 @@ var jsdom = require('mocha-jsdom');
 var expect = require('chai').expect
 
 import initHead from '../src/_init/initHead'
-import colTitle from '../src/_init/_initTitle/colTitle'
-import rowTitle from '../src/_init/_initTitle/rowTitle'
+import colTitle from '../src/_init/initColTitle'
+import rowTitle from '../src/_init/initRowTitle'
 
 describe('_Init Module Tests',function(){
   let table,tbody,thead,tr

@@ -11,7 +11,7 @@ import lineStyle from './lineStyle';
 const drawLine=(data,focI,dire,title,titleIdx)=>{
     data = data.map((item)=>{ return parseFloat(item, 10);});
      // initial the canvas
-    let width=document.body.clientWidth*0.6;
+    let width=740;
     let height=width;
     let cavCon=document.querySelector('.tabular_container')
     if(cavCon.firstElementChild)

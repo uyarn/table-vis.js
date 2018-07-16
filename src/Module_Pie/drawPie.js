@@ -19,7 +19,7 @@ const drawPie=(data,focI,title,titleIdx)=>{
          }
         })
     // initial the canvas
-    let width=document.body.clientWidth*0.6;
+    let width= 740;
     let height=width;
     let cavCon=document.querySelector('.tabular_container')
     if(cavCon.firstElementChild)

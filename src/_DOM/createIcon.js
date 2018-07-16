@@ -2,18 +2,15 @@
 
 import className from 'className';
 
-const createIcon = () => {
-  let IconList=[]
+const createIcon =()=>{
+  let IconList= []
   let barIcon = document.createElement('i');
-  className.addClass(barIcon,'fa fa-chart-chart');
-  IconList.push(barIcon)
+  className.addClass(barIcon,'fa fa-chart-bar');
   let pieIcon = document.createElement('i');
-  className.addClass(pieIcon,'fa fa-chart-pie');
-  IconList.push(pieIcon)
+  className.addClass(pieIcon,'fa fa-chart-line');
   let lineIcon = document.createElement('i');
-  className.addClass(lineIcon,'fa fa-chart-line');
-  IconList.push(lineIcon)
-  return IconList
+  className.addClass(lineIcon,'fa fa-chart-bar');
+  return [barIcon,pieIcon,lineIcon]
 
 }
 

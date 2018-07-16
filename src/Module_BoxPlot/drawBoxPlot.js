@@ -10,8 +10,8 @@ import drawBox from './drawBox'
 const drawBoxPlot = (data,index,boxPlotData,dire,titleCell) => {
     data = data.map((item)=>{
         return parseFloat(item, 10);});
-    let width=document.body.clientWidth*0.6;
-    let height=width;
+    let width= 740;
+    let height = width;
     // initial the canvas
     let cavCon=document.querySelector('.tabular_container')
     if(cavCon.firstElementChild)

@@ -5,8 +5,9 @@ import faChartBar from '@fortawesome/fontawesome-free-solid/faChartBar'
 import faChartPie from '@fortawesome/fontawesome-free-solid/faChartPie'
 import faChartLine from '@fortawesome/fontawesome-free-solid/faChartLine'
 
-const insertCss=()=>{
+import faSignal from '@fortawesome/fontawesome-free-solid/faSignal'
 
+const insertCss=()=>{
   fontawesome.library.add(faChartBar)
   fontawesome.library.add(faChartPie)
   fontawesome.library.add(faChartLine)
