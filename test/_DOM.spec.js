@@ -58,7 +58,7 @@ describe('_DOM Module Tests', ()=>{
      describe('3.createIcon Module Tests', ()=>{
        // branch 1 , should return true
        it('should return the length of icon list, should be 3',()=>{
-         expect(createIcon().length).eql(3);
+         expect(createIcon().length).eql(6);
        })
      })
 

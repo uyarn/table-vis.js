@@ -1,9 +1,9 @@
 'use strict';
 
-const drawPointCol=(ctx,data,width,height,scale,rectStyle,focI,title,titleIdx)=>{
+const drawPointCol=(ctx,ori,data,width,height,scale,rectStyle,focI,title,titleIdx)=>{
   let columnWidth = (width/data.length)*0.05;
   let scaleX =(width/data.length)*0.9;
-  data.forEach(function(d,i) {
+  data.forEach( (d,i)=>{
     // set the position of each Rectangle
     ctx.beginPath();
     ctx.arc(scaleX*(i+1)+columnWidth/2,height-scale(d),columnWidth*4,0,2*Math.PI)
@@ -26,7 +26,8 @@ const drawPointCol=(ctx,data,width,height,scale,rectStyle,focI,title,titleIdx)=>
     ctx.textAlign = 'center';
     ctx.fillText(title[i],scaleX*(i+1)+columnWidth/2,height+20,25);
     ctx.fillStyle = 'rgba(255,255,255,1)';
-    ctx.fillText(d,scaleX*(i+1)+columnWidth/2,height-scale(d)+columnWidth,25)
+    let content = ori.length>0?ori[i]:d
+    ctx.fillText(content,scaleX*(i+1)+columnWidth/2,height-scale(d)+columnWidth,25)
   });
 }
 

@@ -4,7 +4,7 @@ var expect = require('chai').expect
 var canvasDom = require('jsdom');
 
 import canvasBase from '../src/_Canvas/canvasBase'
-import drawLineBase from '../src/_Canvas/drawLineBase'
+// import drawLineBase from '../src/_Canvas/drawLineBase'
 // import drawMarkBase from '../src/_Canvas/drawMarkBase'
 const { JSDOM } = canvasDom;
 
@@ -35,19 +35,19 @@ describe('_Canvas Module Tests',()=>{
       })
   })
 
-  describe('drawLineBase Module Tests',()=>{
-      let preCanvas ,ctx
-      const dom = new JSDOM(`<!DOCTYPE html><canvas width="200" height="100"></canvas>`);
-
-      preCanvas = dom.window.document.querySelector('canvas');
-      console.log(preCanvas)
-      ctx = preCanvas.getContext('2d');
-      // test setCanvas function branch 1
-      it('should return the style type Function',()=>{
-        ctx =drawLineBase(ctx,0,0,0,50);
-        expect(Object.prototype.toString.call(ctx)).eql('[object HTMLElment]')
-      });
-
-  })
+  // describe('drawLineBase Module Tests',()=>{
+  //     let preCanvas ,ctx
+  //     const dom = new JSDOM(`<!DOCTYPE html><canvas width="200" height="100"></canvas>`);
+  //
+  //     preCanvas = dom.window.document.querySelector('canvas');
+  //     console.log(preCanvas)
+  //     ctx = preCanvas.getContext('2d');
+  //     // test setCanvas function branch 1
+  //     it('should return the style type Function',()=>{
+  //       ctx =drawLineBase(ctx,0,0,0,50);
+  //       expect(Object.prototype.toString.call(ctx)).eql('[object HTMLElment]')
+  //     });
+  //
+  // })
 
 })

@@ -7,7 +7,7 @@ import drawLineBase from 'drawLineBase';
 import drawMarkBase from 'drawMarkBase';
 import drawBarRect from './drawBarRect';
 
-const drawBar=(data,focI,dire,title,titleIdx)=>{
+const drawBar=(ori,data,focI,dire,title,titleIdx)=>{
     data = data.map((item)=>
         {  return parseFloat(item, 10)});
     let width = 740;
@@ -29,7 +29,7 @@ const drawBar=(data,focI,dire,title,titleIdx)=>{
     drawMarkBase(canvas.node(),maxData,data.length,width,height-20,scale,dire);
     // set bar Style
     let rectStyle=barStyle(ctx);
-    drawBarRect(ctx,data,width,height,scale,rectStyle,focI,title,titleIdx);
+    drawBarRect(ctx,ori,data,width,height,scale,rectStyle,focI,title,titleIdx);
     ctx.scale(2,2);
 
     return cavCon;

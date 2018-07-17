@@ -25,9 +25,10 @@ const initTableVis = function(table){
           if(!this.initial){
             Object.assign(target,{ data:{},rowTitle:rowTitle(table), colTitle:colTitle(table) })
             // create the table_vis containers div elements
+            insertCss();
+
             tabular_container_fluid = createTableVisContainer(target);
             // insert the css style sheet of the table_vis.
-            insertCss();
             // the initial val is to ensure only one table_vis container are created when the web pages have more than one table
             this.initial = true;
           }

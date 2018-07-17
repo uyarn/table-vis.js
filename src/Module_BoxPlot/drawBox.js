@@ -1,6 +1,6 @@
 'use strict';
 
-const drawBox = (ctx,data,width,height,scale,index,boxPlotData,titleCell)=>{
+const drawBox = (ctx,ori,data,width,height,scale,index,boxPlotData,titleCell)=>{
       ctx.beginPath();
 
       // draw max min value line;
@@ -45,7 +45,7 @@ const drawBox = (ctx,data,width,height,scale,index,boxPlotData,titleCell)=>{
       let focPos =  height-scale(data[index])-10;
       ctx.arc(width*0.5,focPos,10,0,Math.PI*2)
       ctx.font='20px Arial'
-      ctx.fillText(data[index],width*0.2,focPos);
+      ctx.fillText(ori[index],width*0.2,focPos);
       ctx.fill();
       // ctx.stroke();
 }

@@ -1,14 +1,21 @@
 'use strict'
 
-const numericalData=(cell,data,title)=>{
+const numericalData=(cell,data,title,oriData)=>{
   for(let i =0;i<cell[0].length;){
-      // 替换千分位中的逗号字符
-      let val = cell[0][i].innerHTML.replace(/\,/g,'');
-      data.push(val);
+      let val = cell[0][i].innerHTML
+      let modiVal = val.replace(/\,|\%/g,'')
+      let fraction = /^\d+\/\d+$/
+
+      if(fraction.test(modiVal)){
+        let modiSplit = modiVal.split('/')
+        modiVal = modiSplit[0]/modiSplit[0]
+      }
+      oriData.push(val)
+      data.push(modiVal)
       title.push(cell[1][i].innerHTML)
       i++;
    }
-   return { data:data, title:title };
+   return { oriData:oriData ,data:data, title:title };
 }
 
 export default numericalData;

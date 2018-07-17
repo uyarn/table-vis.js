@@ -2,9 +2,9 @@
 
 import drawLine from './drawLine';
 
-const line=function(data,index,direct,title,titleIdx){
+const line= (ori,data,index,direct,title,titleIdx)=>{
 
-   drawLine(data,index,direct,title,titleIdx);
+   drawLine(ori,data,index,direct,title,titleIdx);
 
 }
 /*!

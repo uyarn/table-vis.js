@@ -12,8 +12,8 @@ const canvasBase = {
      .attr("height", height)
      .style("animation",'canvasKey 1s')
      .style("WebkitAnimation",'canvasKey 1s');
-     if(dire == 'col')
-      d3s.select('.tabular_container').select('canvas').style('transform','rotate(90deg)');
+     // if(dire == 'col')
+     //  d3s.select('.tabular_container').select('canvas').style('transform','rotate(90deg)');
      return canvas;
    },
    setScale:function(height,data){

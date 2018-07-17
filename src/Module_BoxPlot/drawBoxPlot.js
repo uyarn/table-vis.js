@@ -7,7 +7,7 @@ import drawMarkBase from 'drawMarkBase';
 
 import drawBox from './drawBox'
 
-const drawBoxPlot = (data,index,boxPlotData,dire,titleCell) => {
+const drawBoxPlot = (ori,data,index,boxPlotData,dire,titleCell) => {
     data = data.map((item)=>{
         return parseFloat(item, 10);});
     let width= 740;
@@ -27,7 +27,7 @@ const drawBoxPlot = (data,index,boxPlotData,dire,titleCell) => {
     // // draw Mark
     drawMarkBase(canvas.node(),maxData,data.length,width,height-20,scale,dire);
     // set bar Style
-    drawBox(ctx,data,width,height,scale,index,boxPlotData,titleCell);
+    drawBox(ctx,ori,data,width,height,scale,index,boxPlotData,titleCell);
     ctx.scale(2,2);
     return ;
 }

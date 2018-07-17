@@ -41,6 +41,7 @@ const initBtn = (target,tcf) => {
        data:row.data,
        title:row.title,
        index:row.index,
+       oriData:row.oriData,
        head:target.colTitle[headInx].innerHTML,
        status:'row'});
     if('titleIdx' in row)
@@ -55,7 +56,7 @@ const initBtn = (target,tcf) => {
 
     swapTableVis(click,tcf);
 
-    bar(row.data,row.index,'row',row.title,row.titleIdx);
+    bar(row.oriData,row.data,row.index,'row',row.title,row.titleIdx);
     })
   // column button event
   columnBtn.addEventListener('click',
@@ -71,6 +72,7 @@ const initBtn = (target,tcf) => {
        data:col.data,
        title:col.title,
        index:col.index,
+       oriData:col.oriData,
        head:target.rowTitle[headInx].innerHTML,
        status:'col'});
     if('titleIdx' in col)
@@ -85,7 +87,7 @@ const initBtn = (target,tcf) => {
 
     swapTableVis(click,tcf);
 
-    bar(col.data,col.index,'col',col.title,col.titleIdx)
+    bar(col.oriData,col.data,col.index,'col',col.title,col.titleIdx)
     })
   return btnContainer;
 }

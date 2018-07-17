@@ -13,6 +13,7 @@ const colData = function(ele,title,idx){
   let reg =regData([colList,title],idx)
   let data ={
      data:reg.data,
+     oriData:reg.oriData,
      title:reg.title,
      index: Array.prototype.indexOf.call(colList,ele)
    };

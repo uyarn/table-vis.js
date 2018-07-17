@@ -7,23 +7,23 @@ import className from 'className'
 const regData=(cell,idx)=>{
   let data =[];
   let title =[];
-  let reg = new RegExp(/^\d+\.?\d*$/);
+  let oriData =[];
+  // a series of reg expression.
   let pre = cell[0][0].innerHTML.replace(/\,/g,'')
+  let reg = /^\d+\.?\d*$/;
+  let percentFormat = /^\d+\.?\d+\%$/
+  let fraction =/^\d+\/\d+$/
   if(idx){
-
-    cell[0].forEach(function(d){
+    cell[0].forEach( d => {
       className.addClass(d,'tabular_highlight')
     })
   }
-  if(reg.test(pre))
-  {
-    return numericalData(cell,data,title)
-  }
+  // numerical Data procss branch
+  if(reg.test(pre)||percentFormat.test(pre)||fraction.test(pre))
+      return numericalData(cell,data,title,oriData)
+  // category Data procss branch
   else
-  {
-    return cateData(cell[0],data,title)
-  }
-
+      return cateData(cell[0],data,title,oriData)
 }
 
 export default regData;

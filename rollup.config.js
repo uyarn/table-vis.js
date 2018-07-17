@@ -17,6 +17,7 @@ const aliasList =
 		boxplot:path.join(__dirname,'src/Module_BoxPlot/boxplot'),
 		pie:path.join(__dirname,'src/Module_Pie/pie'),
 		point:path.join(__dirname,'src/Module_Point/point'),
+		wordcloud:path.join(__dirname,'src/Module_WordCloud/wordCloud'),
 		canvasBase:path.join(__dirname,'src/_Canvas/canvasBase'),
 		drawLineBase:path.join(__dirname,'src/_Canvas/drawLineBase'),
 		drawMarkBase:path.join(__dirname,'src/_Canvas/drawMarkBase')

@@ -1,6 +1,6 @@
 'use strict';
 
-const drawBarRect=(ctx,data,width,height,scale,rectStyle,focI,title,titleIdx)=>{
+const drawBarRect=(ctx,ori,data,width,height,scale,rectStyle,focI,title,titleIdx)=>{
   let columnWidth = (width/data.length)*0.8;
   let scaleX =(width/data.length)*0.98;
   ctx.font='14px Arial';
@@ -27,7 +27,8 @@ const drawBarRect=(ctx,data,width,height,scale,rectStyle,focI,title,titleIdx)=>{
     ctx.fillText(title[i],scaleX*i+10+columnWidth/2,height,columnWidth);
     // number
     ctx.fillStyle = 'rgba(255,255,255,1)';
-    ctx.fillText(d,scaleX*i+10+columnWidth/2,height-scale(d),columnWidth)
+    let content = ori.length>0?ori[i]:d
+    ctx.fillText(content,scaleX*i+10+columnWidth/2,height-scale(d),columnWidth)
   });
 
 }

@@ -11,6 +11,7 @@ const rowData = function(ele,title,idx){
    let data ={
       data:reg.data,
       title:reg.title,
+      oriData:reg.oriData,
       index: Array.prototype.indexOf.call(rowList,ele)
     };
     if('titleIdx' in reg)
