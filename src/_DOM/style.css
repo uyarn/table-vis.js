@@ -45,7 +45,9 @@
   margin-bottom:10px;
   overflow: hidden;
 }
-
+.table_no_display{
+  display: none!important;
+}
 .tabular_container_fluid h3
 {
   text-align: center;

@@ -51,9 +51,15 @@ const initBtn = (target,tcf) => {
          if('titleIdx' in target.data)
             delete target.data.titleIdx
        }
+
     // init head of target
     tcf.insertBefore(initHead(tcf,target.data.head),tcf.querySelector('.tabular_container'));
+    document.querySelectorAll('.table_no_display').forEach(d=> className.removeClass(d,'table_no_display'))
 
+    row.oriData.length>0?document.querySelectorAll('.cate').
+    forEach(d=> className.addClass(d,'table_no_display')):
+    document.querySelectorAll('.numerical').
+    forEach(d=> className.addClass(d,'table_no_display'))
     swapTableVis(click,tcf);
 
     bar(row.oriData,row.data,row.index,'row',row.title,row.titleIdx);
@@ -61,7 +67,7 @@ const initBtn = (target,tcf) => {
   // column button event
   columnBtn.addEventListener('click',
     ()=>{
-      document.querySelectorAll('.tabular_highlight').forEach(function(d){
+      document.querySelectorAll('.tabular_highlight').forEach( d =>{
         className.removeClass(d,'tabular_highlight');
       })
      btnContainer.style.display='none'
@@ -84,6 +90,13 @@ const initBtn = (target,tcf) => {
           }
     // init head of target
     tcf.insertBefore(initHead(tcf,target.data.head),tcf.querySelector('.tabular_container'));
+    document.querySelectorAll('.table_no_display').forEach(d=> className.removeClass(d,'table_no_display'))
+
+    col.oriData.length>0?document.querySelectorAll('.cate').
+    forEach(d=> className.addClass(d,'table_no_display')):
+    document.querySelectorAll('.numerical').
+    forEach(d=> className.addClass(d,'table_no_display'))
+    swapTableVis(click,tcf);
 
     swapTableVis(click,tcf);
 

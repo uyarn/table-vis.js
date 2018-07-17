@@ -11,13 +11,10 @@ const drawWordCloud = (data,index,title,titleIdx) => {
     if(cavCon.firstElementChild)
       cavCon.removeChild(cavCon.firstElementChild)
   let scale = canvasBase.setScale(100,data);
-  console.log(index)
-  console.log(titleIdx)
   let layout = cloud()
     .size([400, 400])
     .words(title.map(function(d,i) {
       if(titleIdx[i].includes(index)){
-        console.log('test')
         return {text: d, size: scale(data[i]), color:'rgba(40,125,250,1)'}
       }
       else

@@ -30,7 +30,6 @@ const createDrawButton=(target)=>{
   className.addClass(pieIcon,'fa fa-chart-pie');
   pieBtn.appendChild(icon[1])
   pieBtn.addEventListener('click',()=>{
-
     let dArr = [d.data,d.index,d.title,d.titleIdx];
     pie(...dArr)
   });
@@ -38,6 +37,7 @@ const createDrawButton=(target)=>{
 
   // line button
   let lineBtn = document.createElement('button');
+  className.addClass(lineBtn,'numerical');
   lineBtn.appendChild(icon[2])
   lineBtn.addEventListener('click',() =>{
     let dArr = [d.oriData,d.data,d.index,d.status,d.title,d.titleIdx];
@@ -47,26 +47,32 @@ const createDrawButton=(target)=>{
 
   // box plot btn
   let boxplotBtn = document.createElement('button');
+  className.addClass(boxplotBtn,'numerical');
   boxplotBtn.appendChild(icon[3])
   boxplotBtn.addEventListener('click',()=>{
     let dArr = [d.oriData,d.data,d.index,d.status,d.title];
     boxplot(...dArr);
   });
   buttonContainer.appendChild(boxplotBtn)
+
   // point btn
   let pointBtn = document.createElement('button');
   pointBtn.appendChild(icon[4])
+  className.addClass(pointBtn,'numerical');
   pointBtn.addEventListener('click',()=>{
     let dArr = [d.oriData,d.data,d.index,d.status,d.title,d.titleIdx];
     point(...dArr)
   });
   buttonContainer.appendChild(pointBtn)
 
+  // words Cloud button
   let wordCloudBtn = document.createElement('button');
+  className.addClass(wordCloudBtn,'cate');
   wordCloudBtn.appendChild(icon[5])
   wordCloudBtn.addEventListener('click',()=>{
     let dArr = [d.data,d.index,d.title,d.titleIdx];
     wordCloud(...dArr)
+
   });
   buttonContainer.appendChild(wordCloudBtn)
   return buttonContainer;
