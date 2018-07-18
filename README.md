@@ -15,9 +15,9 @@
       * Box Plot Chart :package:
       * Word Cloud :loop:
   * **Install**
-   ```
-   npm install table_vis --save
-   ```
+    ```sh
+    $ npm i --save-dev mocha-jsdom
+    ```
   * **Usage**
     * IIFE
       ```Javascript
