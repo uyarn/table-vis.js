@@ -16,7 +16,7 @@ const tableElement = '[object HTMLTableElement]'
 const initTableVis = function(table){
     if(Object.prototype.toString.call(table)==tableElement){
 
-          let tBody = table.querySelector('tbody');
+          let tBody = table.getElementsByTagName('tbody')[0];
 
           //利用Js的引用类型是浅拷贝的特点
           let target = new Object();

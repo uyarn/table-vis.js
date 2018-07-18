@@ -14,6 +14,8 @@
       * Pie Chart :100:
       * Box Plot Chart :package:
       * Word Cloud :loop:
+  * **Demo**
+    * [Demo Page](http://yarnchen.me/#/table_vis)
   * **Install**
     ```sh
     $ npm i --save-dev mocha-jsdom
@@ -34,5 +36,3 @@
       import table_vis from 'table_vis';
       table_vis.vis(document.getElementsByTagName('table')[0]);
       ```
-  * **Example**
-     * [Demo Page](https://github.com/YarnChen/table_vis/demo/demo.html)
