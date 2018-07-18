@@ -8,7 +8,6 @@ const drawPointCol=(ctx,ori,data,width,height,scale,rectStyle,focI,title,titleId
     ctx.beginPath();
     ctx.arc(scaleX*(i+1)+columnWidth/2,height-scale(d),columnWidth*4,0,2*Math.PI)
     ctx.rect(scaleX*(i+1),height,columnWidth,-scale(d)+columnWidth*4);
-    console.log(titleIdx)
     // highlight the speical one
     if((i==focI && titleIdx == undefined)||(titleIdx!= undefined && titleIdx[i].includes(focI))){
         ctx.fillStyle=rectStyle[0];

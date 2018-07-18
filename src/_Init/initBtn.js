@@ -42,7 +42,7 @@ const initBtn = (target,tcf) => {
        title:row.title,
        index:row.index,
        oriData:row.oriData,
-       head:target.colTitle[headInx].innerHTML,
+       head:target.colTitle[headInx],
        status:'row'});
     if('titleIdx' in row)
         Object.assign(target.data,{titleIdx:row.titleIdx});
@@ -79,7 +79,7 @@ const initBtn = (target,tcf) => {
        title:col.title,
        index:col.index,
        oriData:col.oriData,
-       head:target.rowTitle[headInx].innerHTML,
+       head:target.rowTitle[headInx],
        status:'col'});
     if('titleIdx' in col)
        Object.assign(target.data,{titleIdx:col.titleIdx});

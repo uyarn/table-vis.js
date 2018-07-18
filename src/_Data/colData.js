@@ -11,7 +11,7 @@ const colData = function(ele,title,idx){
     colList.push(tbody[i].children[index])
 
   let reg =regData([colList,title],idx)
-  let data ={
+  let data ={ 
      data:reg.data,
      oriData:reg.oriData,
      title:reg.title,

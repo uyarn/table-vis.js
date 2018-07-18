@@ -39,7 +39,6 @@ export default [{
 	  alias(aliasList),
 		resolve(),
 		commonjs(),
-
 		uglify(),
 		postcss({
       plugins: []

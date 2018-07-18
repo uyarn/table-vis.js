@@ -12,7 +12,7 @@ const numericalData=(cell,data,title,oriData)=>{
       }
       oriData.push(val)
       data.push(modiVal)
-      title.push(cell[1][i].innerHTML)
+      title.push(cell[1][i])
       i++;
    }
    return { oriData:oriData ,data:data, title:title };

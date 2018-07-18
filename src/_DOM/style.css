@@ -19,6 +19,7 @@
    to { background: rgba(110,200,245,1)}
 }
 .tabular_container_fluid{
+  z-index: 50;
   display:inline-block;
   position:fixed;
   margin:auto;
@@ -51,6 +52,7 @@
 .tabular_container_fluid h3
 {
   text-align: center;
+  margin: 10px auto;
 }
 .tabular_highlight{
   animation: td_highlight 1s infinite reverse;
