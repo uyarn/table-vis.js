@@ -25,12 +25,14 @@ describe('_Init Module Tests',function(){
     table.appendChild(thead);
     table.appendChild(tbody);
     tbody.appendChild(tr)
-    expect(colTitle(table)[0].innerHTML).eql('cate_one');
+    expect(colTitle(table)[0]).eql('cate_one');
   });
-  });
-  describe('2. _colTitle Module Tests',function(){
 
-  it('should be cate_one', function() {
+  });
+
+  describe('2. _rowTitle Module Tests',function(){
+
+  it('should return title`n`', function() {
     let tr2 =document.createElement('tr');
     for(let i=0;i<5;i++){
       let td = document.createElement('td');
@@ -39,10 +41,31 @@ describe('_Init Module Tests',function(){
     }
     thead.appendChild(tr2)
     let title = rowTitle(table)
-    expect(title[0].innerHTML).eql('title1');
-    expect(title[1].innerHTML).eql('title2');
-    expect(title[2].innerHTML).eql('title3');
-    expect(title[3].innerHTML).eql('title4');
+    expect(title[0]).eql('title1');
+    expect(title[1]).eql('title2');
+    expect(title[2]).eql('title3');
+    expect(title[3]).eql('title4');
+
+  });
+
+  it('multiply title elements,should return title`n`', function() {
+    let m_tr =document.createElement('tr');
+    for(let i=0;i<5;i++){
+      let m_td = document.createElement('td');
+      let m_a = document.createElement('a');
+      m_a.innerHTML='title'.concat(i)
+      m_td.appendChild(m_a)
+      m_tr.appendChild(m_td)
+    }
+    let m_table = document.createElement('table');
+    let m_thead = document.createElement('thead');
+    m_thead.appendChild(m_tr)
+    m_table.appendChild(m_thead)
+    let title = rowTitle(m_table)
+    expect(title[0]).eql('title1');
+    expect(title[1]).eql('title2');
+    expect(title[2]).eql('title3');
+    expect(title[3]).eql('title4');
 
   });
   });

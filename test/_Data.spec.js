@@ -19,9 +19,9 @@ describe('_Data Module Tests', ()=>{
     it('numerical data extract function test',  ()=>{
       for(let i=0;i<10;i++){
         let td = document.createElement('td');
-        let th = document.createElement('th');
+        let th;
         td.innerHTML=i;
-        th.innerHTML='title'+i;
+        th='title'+i;
         tdArr.push(td);
         thArr.push(th);
       }
@@ -39,9 +39,9 @@ describe('_Data Module Tests', ()=>{
       let tdArr2=[], thArr2=[], totalArr2=[];
       for(let i=1;i<11;i++){
         let td = document.createElement('td');
-        let th = document.createElement('th');
+        let th;
         td.innerHTML=i+'/'+2*i;
-        th.innerHTML='title'+i;
+        th='title'+i;
         tdArr2.push(td);
         thArr2.push(th);
       }

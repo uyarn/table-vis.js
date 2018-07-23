@@ -34,7 +34,7 @@ const drawLinePath=(ctx,ori,data,width,height,scale,lineStyle,focI,title,titleId
     ctx.fillText(title[i],eachLen*i+(eachLen/2),height,eachLen);
 
   });
-
+  return ctx
 
 }
 

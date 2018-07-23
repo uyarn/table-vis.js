@@ -28,6 +28,7 @@ const drawPointCol=(ctx,ori,data,width,height,scale,rectStyle,focI,title,titleId
     let content = ori.length>0?ori[i]:d
     ctx.fillText(content,scaleX*(i+1)+columnWidth/2,height-scale(d)+columnWidth,25)
   });
+  return ctx
 }
 
 export default drawPointCol;

@@ -13,7 +13,7 @@ const drawBarMark=(canvas,maxData,len,width,height,scale,dire)=>{
       while(i<maxData){
         let thisMark = i+eachMark;
         let y=height-scale(thisMark)
-        
+
         ctx.moveTo(5,y);
         ctx.lineTo(width,y);
         ctx.strokeStyle="rgba(135,135,135,0.5)";
@@ -22,7 +22,7 @@ const drawBarMark=(canvas,maxData,len,width,height,scale,dire)=>{
         ctx.fillText(thisMark,0,y,15);
         i=i+eachMark;
       }
-
+      return ctx
 }
 
 export default drawBarMark;

@@ -11,7 +11,7 @@ const drawPieText=(ctx,rx,ry,rmx,rmy,radius,data,total)=>{
     let rmResult = (100-percent).toFixed(2)+'%';
     ctx.fillText(result,rx,ry)
     ctx.fillText(rmResult,rmx,rmy)
-
+    return ctx
 }
 
 export default drawPieText;

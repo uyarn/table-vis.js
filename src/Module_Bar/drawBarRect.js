@@ -29,8 +29,9 @@ const drawBarRect=(ctx,ori,data,width,height,scale,rectStyle,focI,title,titleIdx
     ctx.fillStyle = 'rgba(255,255,255,1)';
     let content = ori.length>0?ori[i]:d
     ctx.fillText(content,scaleX*i+10+columnWidth/2,height-scale(d),columnWidth)
-  });
 
+  });
+  return ctx;
 }
 
 export default drawBarRect;

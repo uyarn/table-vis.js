@@ -37,13 +37,13 @@ const initBtn = (target,tcf) => {
       let row = rowData(target.ele,target.rowTitle,1);
       let headInx = colData(target.ele,target.colTitle,0).index;
 
-    Object.assign(target.data,{
-       data:row.data,
-       title:row.title,
-       index:row.index,
-       oriData:row.oriData,
-       head:target.colTitle[headInx],
-       status:'row'});
+      Object.assign(target.data,{
+        data:row.data,
+        title:row.title,
+        index:row.index,
+        oriData:row.oriData,
+        head:target.colTitle[headInx],
+        status:'row'});
     if('titleIdx' in row)
         Object.assign(target.data,{titleIdx:row.titleIdx});
     else
@@ -54,7 +54,7 @@ const initBtn = (target,tcf) => {
 
     // init head of target
     tcf.insertBefore(initHead(tcf,target.data.head),tcf.querySelector('.tabular_container'));
-    document.querySelectorAll('.table_no_display').forEach(d=> className.removeClass(d,'table_no_display'))
+    document.querySelectorAll('.table_no_display').forEach(d => className.removeClass(d,'table_no_display'))
 
     row.oriData.length>0?document.querySelectorAll('.cate').
     forEach(d=> className.addClass(d,'table_no_display')):
